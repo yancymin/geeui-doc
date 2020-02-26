@@ -36,7 +36,6 @@ const Footer = styled.footer`
     color: ${fontColor.black3};
   }
 `
-
 export default ({ children }) => (
   <Container>
     <Sidebar>
