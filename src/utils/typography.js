@@ -1,15 +1,10 @@
 import Typography from "typography"
-// import kirkhamTheme from "typography-theme-kirkham"
-
-const fontColor = {
-    black1: "#292F3A",
-    black2: "#696D75",
-}
+import {color, fontColor} from "../styles/globalStyle"
 
 const typography = new Typography({
     title: 'GEEUI',
     baseFontSize: '16px',
-    baseLineHeight: 1.6,
+    baseLineHeight: 1.66,
     headerFontFamily: ['-apple-system', 'sans-serif'],
     bodyFontFamily: ['-apple-system', 'sans-serif'],
     includeNormalize: true,
@@ -37,9 +32,11 @@ const typography = new Typography({
         },
         p: {
             fontWeight: '300',
-            color: fontColor.black2
+            color: fontColor.black2,
+            letterSpacing: '0.01em'
         },
         hr: {
+            backgroundColor: color.gray6,
             margin: '32px 0 48px 0'
         }
     })

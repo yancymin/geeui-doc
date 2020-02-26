@@ -1,9 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
-import "./layout.scss"
 // import { rhythm } from "../utils/typography"
 import styled from 'styled-components';
-import { color } from '../styles/globalStyle';
+import { color, fontColor } from '../styles/globalStyle';
 import logoPath from '../assets/logo.png';
 
 const Container = styled.div`
@@ -25,7 +24,7 @@ const Logo = styled.div`
     width: 100%;
     height: 100px;
     padding: 36px 24px;
-    border-bottom: 1px solid ${color.gray5}
+    border-bottom: 1px solid ${color.gray5};
 
     img {
         height: 28px;
@@ -34,7 +33,7 @@ const Logo = styled.div`
 
 const Tag = styled.span`
     height: fit-content;
-    padding: 3px 6px;
+    padding: 2px 6px;
     background-color: ${color.gray5};
     font-size: 10px;
     font-weight: 600;
@@ -48,7 +47,7 @@ export default () => {
                 <img alt='logo' src={logoPath} >
                 </img>
                 <Tag>
-                    v 1.0
+                    V 1.0
                  </Tag>
             </Logo>
         </Container>
