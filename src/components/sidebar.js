@@ -43,6 +43,9 @@ const Tag = styled.span`
 export default () => {
     return (
         <Container>
+            <Link to='/my-files'>
+                dssfdsf
+            </Link>
             <Logo>
                 <img alt='logo' src={logoPath} >
                 </img>
