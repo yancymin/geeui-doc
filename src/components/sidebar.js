@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link, graphql, useStaticQuery } from "gatsby"
 // import { rhythm } from "../utils/typography"
+import { css } from "@emotion/core"
 import styled from 'styled-components';
 import { color, fontColor } from '../styles/globalStyle';
 import logoPath from '../assets/logo.png';
@@ -17,12 +18,18 @@ const Container = styled.div`
     flex-direction: column;
     background-color: ${color.gray1};
     box-shadow: 1px 0px 0px ${color.gray5};
+    min-height: 44px;
+    overflow-y: scroll;
 `
 const Logo = styled.div`
+    position: fixed;
+    z-index: 100;
+    background-color: ${color.gray1};
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    max-width: 240px;
     height: 100px;
     padding: 36px 24px;
     box-shadow: 0 1px 0px ${color.gray5};
@@ -41,9 +48,11 @@ const Tag = styled.span`
     border-radius: 3px;
 `
 const Nav = styled.div`
+    position: absolute;
+    top: 100px;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow-y: auto;
     transition: all 0.25s ease;
 
     .close {
@@ -54,7 +63,7 @@ const Nav = styled.div`
 
          a {
              /* position: absolute; */
-             /* opacity: 0; */
+             opacity: 0;
              /* display: none; */
          }
 
@@ -73,18 +82,42 @@ const List = styled.div`
     flex-direction: column;
     background-color: ${color.gray2};
     border-top: 1px solid ${color.gray5};
-    border-bottom: 1px solid ${color.gray5};
+    /* border-bottom: 1px solid ${color.gray5}; */
     transition: all 1s ease;
+    overflow: hidden;
+
 
     .active {
-        color: red;
+        color: ${color.blue1};
+        font-weight: 500;
+
+        p {
+            color: ${color.blue1};
+            font-weight: 500;
+        }
+
+        &:before {
+            position: absolute;
+            left: 0;
+            content: '';
+            display: block;
+            width: 4px;
+            height: 24px;
+            background-color: ${color.blue1};
+            border-radius: 0 3px 3px 0;
+        }
+
+        &:hover {
+            color: ${color.blue1};
+            font-weight: 500;
+        }
     }
 
     a {
         position: relative;
         display: block; 
         width: 240px;
-        height: 44px;
+        min-height: 44px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -95,6 +128,8 @@ const List = styled.div`
         margin: 0;
         color: ${fontColor.black2};
         text-decoration: none;
+        transition: all 0.25s ease;
+
 
         &:hover {
             background-color: ${color.gray5};
@@ -106,7 +141,7 @@ const List = styled.div`
 const Title = styled.h4`
     display: block; 
     width: 240px;
-    height: 44px;
+    min-height: 44px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -153,15 +188,27 @@ export default () => {
       }
   `)
 
-    console.log(data)
-
+    const navIndex = ['开始', '基本', '组件', '模式', '数据可视化', '帮助']
     const list1 = []
+    const list2 = []
+    const list3 = []
+    const list4 = []
+    const list5 = []
+    const list6 = []
+    const lists = [list1, list2, list3, list4, list5, list6]
+
     data.allMarkdownRemark.edges.map(({ node }, index) => {
-        if (node.fields.slug.includes('开始')) {
-            list1.push(node.fields.slug)
+        function pushList(list, navIndex) {
+            if (node.fields.slug.includes(navIndex)) {
+                list.push(node.fields.slug)
+                return list
+            }
         }
+        navIndex.forEach((item, index) => {
+            pushList(lists[index], navIndex[index])
+        })
     })
-    console.log(list1)
+
     return (
         <Container>
             <Logo>
@@ -178,16 +225,80 @@ export default () => {
                 <List className={`${isToggled ? ' close' : ''}`} onClick={() => setToggled(!isToggled)} >
                     <Title>
                         <p>
-                            开始
+                            {navIndex[0]}
                         </p>
                         <i>
                         </i>
                     </Title>
-                    {/* {data.allMarkdownRemark.edges.map(({ node }, index) => {
-                        if (node.fields.slug.includes('开始')) {
-                            <Link key={index} activeClassName="active" to={node.fields.slug} >{node.frontmatter.title}</Link>
-                        }
-                    })} */}
+                    {list1.map((item, index) => {
+                        let text = item.replace('/' + navIndex[0] + '/', '').replace('/', '')
+                        return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
+                    })}
+                </List>
+                <List  >
+                    <Title>
+                        <p>
+                            {navIndex[1]}
+                        </p>
+                        <i>
+                        </i>
+                    </Title>
+                    {list2.map((item, index) => {
+                        let text = item.replace('/' + navIndex[1] + '/', '').replace('/', '')
+                        return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
+                    })}
+                </List>
+                <List  >
+                    <Title>
+                        <p>
+                            {navIndex[2]}
+                        </p>
+                        <i>
+                        </i>
+                    </Title>
+                    {list3.map((item, index) => {
+                        let text = item.replace('/' + navIndex[2] + '/', '').replace('/', '')
+                        return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
+                    })}
+                </List>
+                <List  >
+                    <Title>
+                        <p>
+                            {navIndex[3]}
+                        </p>
+                        <i>
+                        </i>
+                    </Title>
+                    {list4.map((item, index) => {
+                        let text = item.replace('/' + navIndex[3] + '/', '').replace('/', '')
+                        return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
+                    })}
+                </List>
+                <List  >
+                    <Title>
+                        <p>
+                            {navIndex[4]}
+                        </p>
+                        <i>
+                        </i>
+                    </Title>
+                    {list5.map((item, index) => {
+                        let text = item.replace('/' + navIndex[4] + '/', '').replace('/', '')
+                        return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
+                    })}
+                </List>
+                <List css={css`
+                        background-color: transparent !important;
+                     `} >
+                    <Link activeClassName="active" to='/帮助' css={css`
+                        padding: 0 !important;
+                     `} >
+                        <Title>
+                            <p>
+                                {navIndex[5]}
+                            </p>
+                        </Title>
+                    </Link>
                 </List>
             </Nav>
         </Container >

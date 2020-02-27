@@ -13,7 +13,7 @@ const typography = new Typography({
             margin: '0'
         },
         h1: {
-            fontWeight: '500',
+            fontWeight: '600',
             fontSize: '40px',
             lineHeight: '40px',
             color: fontColor.black1
