@@ -1,5 +1,5 @@
 import Typography from "typography"
-import {color, fontColor} from "../styles/globalStyle"
+import { color, fontColor } from "../styles/globalStyle"
 
 const typography = new Typography({
     title: 'GEEUI',
@@ -22,17 +22,24 @@ const typography = new Typography({
             fontSize: '24px',
             lineHeight: '24px',
             fontWeight: '500',
-            margin: '48px 0 32px 0'
+            margin: '48px 0 32px 0',
+            color: fontColor.black1
         },
         h3: {
             fontSize: '18px',
             lineHeight: '18px',
             fontWeight: '500',
-            margin: '32px 0 24px 0'
+            margin: '32px 0 24px 0',
+            color: fontColor.black1
         },
         p: {
             fontWeight: '300',
             color: fontColor.black2,
+            letterSpacing: '0.01em'
+        },
+        li: {
+            fontWeight: '300',
+            color: fontColor.black1,
             letterSpacing: '0.01em'
         },
         hr: {

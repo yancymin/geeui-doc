@@ -19,7 +19,7 @@ const Article = styled.article`
 const ArticleWrap = styled.div`
     width: 100%;
     max-width: 740px;
-    padding: 0 20px
+    padding: 0 40px
 `
 const Footer = styled.footer`
   display: flex;
