@@ -45,6 +45,12 @@ const typography = new Typography({
         hr: {
             backgroundColor: color.gray6,
             margin: '32px 0 48px 0'
+        },
+        a: {
+            fontWeight: '300',
+            color: fontColor.black2,
+            letterSpacing: '0.01em',
+            textDecoration: 'none',
         }
     })
 })

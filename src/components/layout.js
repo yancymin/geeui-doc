@@ -1,5 +1,6 @@
 import React from "react"
 import Sidebar from "./sidebar"
+import Iconui from "./iconui"
 import styled from 'styled-components';
 import { color, fontColor } from '../styles/globalStyle';
 
@@ -17,9 +18,15 @@ const Article = styled.article`
     margin-left: 240px;
 `
 const ArticleWrap = styled.div`
+    position: relative;
     width: 100%;
-    max-width: 740px;
-    padding: 0 40px
+    max-width: 780px;
+    padding: 0 40px;
+    display: flex;
+    /* justify-content: center;
+     */
+     align-items: center;
+    flex-direction: column;
 `
 const Footer = styled.footer`
   display: flex;
@@ -40,6 +47,8 @@ export default ({ children }) => (
   <Container>
     <Sidebar>
     </Sidebar>
+    <Iconui>
+    </Iconui>
     <Article>
       <ArticleWrap>
         {children}

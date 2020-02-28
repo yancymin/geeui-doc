@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from "gatsby"
-// import { rhythm } from "../utils/typography"
 import { css } from "@emotion/core"
 import styled from 'styled-components';
 import { color, fontColor } from '../styles/globalStyle';
@@ -12,7 +11,7 @@ const Container = styled.div`
     top: 0;
     left: 0;
     width: 100%;
-    max-width: 240px;
+    max-width: 244px;
     height: 100vh;
     display: inline-flex;  
     flex-direction: column;
@@ -20,6 +19,31 @@ const Container = styled.div`
     box-shadow: 1px 0px 0px ${color.gray5};
     min-height: 44px;
     overflow-y: scroll;
+    overflow-x: hidden;
+
+    ::-webkit-scrollbar , ::-webkit-scrollbar-thumb{
+        visibility: hidden;
+        width:0;
+        height:4px;
+        background-color:unset;
+    }
+
+    &:hover {
+        ::-webkit-scrollbar
+        {
+            width:4px;
+            height:16px;
+            background-color: transparent;
+            visibility: visible;
+        }
+        ::-webkit-scrollbar-thumb
+        {
+            visibility: visible;
+            border-radius:0;
+            background-color: ${color.gray5};
+        }
+    }
+
 `
 const Logo = styled.div`
     position: fixed;
@@ -29,7 +53,7 @@ const Logo = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 240px;
+    max-width: 244px;
     height: 100px;
     padding: 36px 24px;
     box-shadow: 0 1px 0px ${color.gray5};
@@ -57,7 +81,7 @@ const Nav = styled.div`
 
     .close {
          display: block;
-         background-color: transparent;
+         /* background-color: transparent; */
          border-color: transparent;
          height: 44px;
 
@@ -80,7 +104,7 @@ const Nav = styled.div`
 const List = styled.div`
     display: flex;
     flex-direction: column;
-    background-color: ${color.gray2};
+    /* background-color: ${color.gray2}; */
     border-top: 1px solid ${color.gray5};
     /* border-bottom: 1px solid ${color.gray5}; */
     transition: all 1s ease;
@@ -140,7 +164,7 @@ const List = styled.div`
 
 const Title = styled.h4`
     display: block; 
-    width: 240px;
+    width: 244px;
     min-height: 44px;
     display: flex;
     justify-content: space-between;
@@ -235,7 +259,7 @@ export default () => {
                         return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
                     })}
                 </List>
-                <List  >
+                <List className={`${isToggled ? ' close' : ''}`} onClick={() => setToggled(!isToggled)} >
                     <Title>
                         <p>
                             {navIndex[1]}
@@ -248,7 +272,7 @@ export default () => {
                         return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
                     })}
                 </List>
-                <List  >
+                <List className={`${isToggled ? ' close' : ''}`} onClick={() => setToggled(!isToggled)} >
                     <Title>
                         <p>
                             {navIndex[2]}

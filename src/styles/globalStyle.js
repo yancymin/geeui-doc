@@ -14,4 +14,10 @@ const fontColor = {
     black3: "#A2A6AD",
 }
 
-export { color, fontColor };
+const ease = {
+    normal: 'all 0.25s ease',
+    easeOutBack(timing) { return `all ${timing} cubic-bezier(0.175, 0.885, 0.32, 1.275)` },
+    easeOutQuart(timing) { return `all ${timing} cubic-bezier(0.165, 0.84, 0.44, 1)` },
+}
+
+export { color, fontColor, ease };
