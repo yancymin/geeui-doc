@@ -6,12 +6,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: 'page',
         path: `${__dirname}/src/pages`,
       },
       // options: {
-      //   name: `images`,
-      //   path: path.join(__dirname, `src`, `images`),
-      // },
+      //   path: `${__dirname}/src/pages`,
+      //   name: 'images'
+      // }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -33,17 +34,16 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          `gatsby-remark-autolink-headers`,
           {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 700,
-              linkImagesToOriginal: true,
-              markdownCaptions: true,
-              loading: 'lazy',
+              quality: 90,
+              sizeByPixelDensity: true
             },
           },
         ],
-        plugins: [`gatsby-remark-autolink-headers`],
       }
     },
     {
@@ -62,6 +62,6 @@ module.exports = {
         trickle: false,
         minimum: 0.5,
       },
-    },
+    }
   ],
 }

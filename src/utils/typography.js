@@ -37,10 +37,14 @@ const typography = new Typography({
             color: fontColor.black2,
             letterSpacing: '0.01em'
         },
+        ul: {
+            marginBottom: 0
+        },
         li: {
             fontWeight: '300',
             color: fontColor.black1,
-            letterSpacing: '0.01em'
+            letterSpacing: '0.01em',
+            marginBottom: '8px',
         },
         hr: {
             backgroundColor: color.gray6,

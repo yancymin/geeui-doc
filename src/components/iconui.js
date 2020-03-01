@@ -42,7 +42,7 @@ const Icon = styled.a`
         border-radius: 3px;
         font-size: 10px;
         transition: ${ease.easeOutBack(`0.16s`)};
-        transition-delay: 0.15s;
+        transition-delay: 0.08s;
         transform: perspective(80px) rotateX(-20deg) scaleY(0.95);
         transform-origin: top;
     }
