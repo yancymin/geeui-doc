@@ -62,6 +62,16 @@ module.exports = {
         trickle: false,
         minimum: 0.5,
       },
+    },
+    {
+      resolve: "gatsby-plugin-page-progress",
+      options: {
+        includePaths: ["/", { regex: "^/" }],
+        excludePaths: [],
+        height: 4,
+        prependToBody: false,
+        color: `#292F3A`
+      }
     }
   ],
 }
