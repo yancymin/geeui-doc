@@ -8,6 +8,8 @@ const Container = styled.div`
     width: 100vw;
     display: flex;
     justify-content: space-between;
+    background-color: var(--bg);
+    transition: all 0.2s ease;
 `
 const Article = styled.article`
     width: calc( 100vw - 240px );
@@ -32,7 +34,7 @@ const ArticleWrap = styled.div`
       transition: ${ease.normal};
       &:hover {
         text-decoration: underline;
-        color: ${color.blue1};
+        color: var(--blue1);
       }
     }
 `
@@ -42,13 +44,13 @@ const Footer = styled.footer`
   align-items: center;
   width: 100%;
   padding: 24px 40px;
-  border-top: 1px solid ${color.gray5};
+  border-top: 1px solid var(--gray5);
 
   span {
     font-weight: normal;
     font-size: 12px;
     line-height: 12px;
-    color: ${fontColor.black3};
+    color: var(--black3);
   }
 `
 

@@ -1,0 +1,37 @@
+body {
+  transition: all 0.3s ease;
+}
+
+body.light-mode {
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+body.dark-mode {
+  --gray1: #282f3b; /*sidebar bg*/
+  --gray2: hsl(218, 19%, 24%); /*sidebar active*/
+  --gray3: #333d4c; /*icon bg*/
+  --gray4: #7888a6; /*icon fill*/
+  --gray5: #484e58; /*sidebar border*/
+  --gray6: #484e58; /*article line*/
+  --blue1: #5286ff;
+  --black1: #d0d2d7;
+  --black2: #a2a6ad;
+  --black3: #696d75;
+  --bg: #232934;
+  background-color: var(--bg);
+}
+
+:root {
+  --gray1: #f8f9fc; /*sidebar bg*/
+  --gray2: #f3f4f7; /*sidebar active*/
+  --gray3: #f2f5fa; /*icon bg*/
+  --gray4: #7888a6; /*icon fill*/
+  --gray5: rgba(216, 221, 230, 0.6); /*sidebar border*/
+  --gray6: #d8dde6; /*article line*/
+  --blue1: #3973ff;
+  --black1: #292f3a;
+  --black2: #696d75;
+  --black3: #a2a6ad;
+  --bg: #ffffff;
+}

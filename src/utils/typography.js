@@ -16,32 +16,32 @@ const typography = new Typography({
             fontWeight: '600',
             fontSize: '40px',
             lineHeight: '40px',
-            color: fontColor.black1
+            color: `var(--black1)`
         },
         h2: {
             fontSize: '24px',
             lineHeight: '24px',
             fontWeight: '500',
             margin: '48px 0 32px 0',
-            color: fontColor.black1
+            color: `var(--black1)`
         },
         h3: {
             fontSize: '18px',
             lineHeight: '18px',
             fontWeight: '500',
             margin: '32px 0 24px 0',
-            color: fontColor.black1
+            color: `var(--black1)`
         },
         h4: {
             fontSize: '16px',
             lineHeight: '16x',
             fontWeight: '500',
             margin: '24px 0 16px 0',
-            color: fontColor.black1
+            color: `var(--black1)`
         },
         p: {
             fontWeight: '300',
-            color: fontColor.black2,
+            color: `var(--black2)`,
             letterSpacing: '0.01em'
         },
         ul: {
@@ -49,25 +49,25 @@ const typography = new Typography({
         },
         li: {
             fontWeight: '300',
-            color: fontColor.black2,
+            color: `var(--black2)`,
             letterSpacing: '0.01em',
             marginBottom: '8px',
         },
         hr: {
-            backgroundColor: color.gray6,
+            backgroundColor: `var(--gray6)`,
             margin: '32px 0 48px 0'
         },
         a: {
             fontWeight: '300',
-            color: fontColor.black2,
+            color: `var(--black2)`,
             letterSpacing: '0.01em',
             textDecoration: 'none',
         },
         blockquote: {
             paddingLeft: "16px",
             marginLeft: 0,
-            borderLeft: `4px solid ${color.gray6}`,
-        },
+            borderLeft: `4px solid var(--gray6)`,
+        }
     })
 })
 

@@ -18,10 +18,10 @@ const ArticleRelative = styled.div`
         text-decoration: none !important;
         transition: ${ease.normal};
         &:hover {
-            border-color: ${color.blue1};
-            background-color: ${color.gray1};
+            border-color: var(--blue1);
+            background-color: var(--gray1);
             div{
-                color: ${color.blue1};
+                color: var(--blue1);
                 &::before, &::after {
                    filter: hue-rotate(376deg) brightness(1.4) saturate(16) contrast(1);
                 }
@@ -32,7 +32,7 @@ const ArticleRelative = styled.div`
     span {
         font-size: 12px;
         line-height: 12px;
-        color: ${fontColor.black2};
+        color: var(--black2);
         font-weight: 300;
         margin-bottom: 16px;
     }
@@ -50,7 +50,7 @@ const Left = styled(Link)`
     flex-direction: column;
     width: calc( 50% - 8px);
     padding: 16px;
-    border: 1px solid ${color.gray6};
+    border: 1px solid var(--gray6);
     border-radius: 4px;
 
     span {
@@ -77,7 +77,7 @@ const Right = styled(Link)`
     width: calc( 50% - 8px);
     padding: 16px;
     text-align: right;
-    border: 1px solid ${color.gray6};
+    border: 1px solid var(--gray6);
     border-radius: 4px;
 
     span {
@@ -103,7 +103,7 @@ const ArticleNav = styled.div`
     font-weight: 300;
     font-size: 18px;
     line-height: 18px;
-    color: ${fontColor.black1};
+    color: var(--black1);
 `
 export default props => {
     const data = useStaticQuery(graphql`

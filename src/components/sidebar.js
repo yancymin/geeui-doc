@@ -3,7 +3,8 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import { css } from "@emotion/core"
 import styled from 'styled-components';
 import { color, fontColor } from '../styles/globalStyle';
-import logoPath from '../assets/logo.png';
+import logoLight from '../assets/logo.svg';
+import logoDark from '../assets/logo2.svg';
 import arrowDown from '../assets/arrow_down.svg';
 
 const Container = styled.div`
@@ -15,11 +16,12 @@ const Container = styled.div`
     height: 100vh;
     display: inline-flex;  
     flex-direction: column;
-    background-color: ${color.gray1};
-    box-shadow: 1px 0px 0px ${color.gray5};
+    background-color: var(--gray1);
+    box-shadow: 1px 0px 0px var(--gray5);
     min-height: 44px;
     overflow-y: scroll;
     overflow-x: hidden;
+    transition: all 0.2s ease;
 
     ::-webkit-scrollbar , ::-webkit-scrollbar-thumb{
         visibility: hidden;
@@ -40,7 +42,7 @@ const Container = styled.div`
         {
             visibility: visible;
             border-radius:0;
-            background-color: ${color.gray5};
+            background-color: var(--gray5);
         }
     }
 
@@ -48,7 +50,7 @@ const Container = styled.div`
 const Logo = styled.div`
     position: fixed;
     z-index: 100;
-    background-color: ${color.gray1};
+    background-color: var(--gray1);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,7 +58,9 @@ const Logo = styled.div`
     max-width: 244px;
     height: 100px;
     padding: 36px 24px;
-    box-shadow: 0 1px 0px ${color.gray5};
+    box-shadow: 0 1px 0px var(--gray5);
+    transition: all 0.2s ease;
+
 
     img,a {
         height: 28px;
@@ -66,10 +70,11 @@ const Logo = styled.div`
 const Tag = styled.span`
     height: fit-content;
     padding: 2px 6px;
-    background-color: ${color.gray5};
+    background-color: var(--gray5);
     font-size: 10px;
     font-weight: 600;
     border-radius: 3px;
+    color: var(--black2);
 `
 const Nav = styled.div`
     position: absolute;
@@ -104,19 +109,20 @@ const Nav = styled.div`
 const List = styled.div`
     display: flex;
     flex-direction: column;
-    /* background-color: ${color.gray2}; */
-    border-top: 1px solid ${color.gray5};
-    /* border-bottom: 1px solid ${color.gray5}; */
+    /* background-color: var(--gray2); */
+    border-top: 1px solid var(--gray5);
+    /* border-bottom: 1px solid var(--gray5); */
     transition: all 1s ease;
     overflow: hidden;
+    padding-bottom: 16px;
 
 
     .active {
-        color: ${color.blue1};
+        color: var(--blue1);
         font-weight: 500;
 
         p {
-            color: ${color.blue1};
+            color: var(--blue1);
             font-weight: 500;
         }
 
@@ -127,12 +133,12 @@ const List = styled.div`
             display: block;
             width: 4px;
             height: 24px;
-            background-color: ${color.blue1};
+            background-color: var(--blue1);
             border-radius: 0 3px 3px 0;
         }
 
         &:hover {
-            color: ${color.blue1};
+            color: var(--blue1);
             font-weight: 500;
         }
     }
@@ -150,14 +156,14 @@ const List = styled.div`
         font-size: 14px;
         line-height: 14px;
         margin: 0;
-        color: ${fontColor.black2};
+        color: var(--black2);
         text-decoration: none;
         transition: all 0.25s ease;
 
 
         &:hover {
-            background-color: ${color.gray5};
-            color: ${fontColor.black1};
+            background-color: var(--gray2);
+            color: var(--black1);
         }
     }
 `
@@ -173,15 +179,15 @@ const Title = styled.h4`
     margin: 0;
     transition: all 0.25s ease;
         &:hover {
-            background-color: ${color.gray5};
-            color: ${fontColor.black1};
+            background-color: var(--gray5);
+            color: var(--black1);
         }
     p {
         font-weight: 500;
         font-size: 14px;
         line-height: 14px;
         margin: 0;
-        color: ${fontColor.black1};
+        color: var(--black1);
     }
     i {
         display: block;
@@ -237,7 +243,7 @@ export default () => {
         <Container>
             <Logo>
                 <Link to='/'>
-                    <img alt='logo' src={logoPath} >
+                    <img alt='logo' src={ logoLight} >
                     </img>
                 </Link>
                 <Tag>

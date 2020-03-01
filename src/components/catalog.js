@@ -16,7 +16,7 @@ const Catalog = styled.div`
     span {
         display: flex;
         align-items: center;
-        color: ${fontColor.black2};
+        color: var(--black2);
         font-weight: 500;
         font-size: 14px;
         line-height: 14px;
@@ -42,7 +42,7 @@ const CatalogWrap = styled.div`
     }
 
     a {
-        color: ${fontColor.black2};
+        color: var(--black2);
         font-weight: 300;
         font-size: 14px;
         line-height: 14px;
@@ -50,7 +50,7 @@ const CatalogWrap = styled.div`
 
         &:hover {
             text-decoration: underline;
-            color: ${color.blue1};
+            color: var(--blue1);
         }
 
         &:last-child, &:nth-of-type(2) {
