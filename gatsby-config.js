@@ -68,7 +68,7 @@ module.exports = {
       options: {
         includePaths: ["/", { regex: "^/" }],
         excludePaths: [],
-        height: 4,
+        height: 3,
         prependToBody: false,
         color: `#292F3A`
       }

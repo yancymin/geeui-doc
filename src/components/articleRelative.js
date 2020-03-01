@@ -130,6 +130,8 @@ export default props => {
       }      
     `)
 
+    const navIndex = ['开始', '基本', '组件', '模式', '数据可视化', '帮助']
+
     return (
         <ArticleRelative >
             <Left to={decodeURIComponent(props.node)}>
@@ -137,7 +139,7 @@ export default props => {
                     上一篇
                 </span>
                 <ArticleNav>
-                    消毒呃不假思索说
+                    {decodeURIComponent(props.node)}
                 </ArticleNav>
             </Left>
             <Right to='/'>
@@ -145,7 +147,7 @@ export default props => {
                     上一篇
                 </span>
                 <ArticleNav>
-                    消毒呃不假思索说
+                    {decodeURIComponent(props.node)}
                 </ArticleNav>
             </Right >
         </ArticleRelative >
