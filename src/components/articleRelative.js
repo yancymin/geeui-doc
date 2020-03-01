@@ -18,9 +18,13 @@ const ArticleRelative = styled.div`
         text-decoration: none !important;
         transition: ${ease.normal};
         &:hover {
+            border-color: ${color.blue1};
             background-color: ${color.gray1};
             div{
                 color: ${color.blue1};
+                &::before, &::after {
+                   filter: hue-rotate(376deg) brightness(1.4) saturate(16) contrast(1);
+                }
             }
         }
     }

@@ -32,6 +32,13 @@ const typography = new Typography({
             margin: '32px 0 24px 0',
             color: fontColor.black1
         },
+        h4: {
+            fontSize: '16px',
+            lineHeight: '16x',
+            fontWeight: '500',
+            margin: '24px 0 16px 0',
+            color: fontColor.black1
+        },
         p: {
             fontWeight: '300',
             color: fontColor.black2,
@@ -42,7 +49,7 @@ const typography = new Typography({
         },
         li: {
             fontWeight: '300',
-            color: fontColor.black1,
+            color: fontColor.black2,
             letterSpacing: '0.01em',
             marginBottom: '8px',
         },

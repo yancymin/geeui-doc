@@ -53,7 +53,7 @@ const CatalogWrap = styled.div`
             color: ${color.blue1};
         }
 
-        &:last-child {
+        &:last-child, &:nth-of-type(2) {
             padding-left: 16px;
         }
     }
@@ -97,11 +97,14 @@ export default props => {
                 <CatalogWrap>
                     {headingValue.map((heading, index) => (
                         <div key={index}>
-                            <a href={'#' + heading.value}>
+                            <a href={'#' + heading.value.toLowerCase()}>
                                 {(heading.depth === 2) ? heading.value : ''}
                             </a>
-                            <a href={'#' + heading.value}>
+                            <a href={'#' + heading.value.toLowerCase().replace(decodeURIComponent('%20'),'-')}>
                                 {(heading.depth === 3) ? heading.value : ''}
+                            </a>
+                            <a href={'#' + heading.value.toLowerCase().replace(decodeURIComponent('%20'),'-')}>
+                                {(heading.depth === 4) ? heading.value : ''}
                             </a>
                         </div>
                     ))}
