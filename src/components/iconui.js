@@ -56,7 +56,7 @@ const IconWrap = styled.div`
 `
 
 const Iconui = props => (
-    <Icon href={props.href} target='_blank'>
+    <Icon href={props.href} target='_blank' onClick={props.onclick}>
         <img src={props.iconsrc} alt={props.alt} />
         <span>
             {props.tips}
@@ -65,13 +65,17 @@ const Iconui = props => (
 )
 
 
+
+
 export default () => {
-    const DarkMode = () => (
-        console.log('ddd')
-    )
+    const DarkMode = () => {
+        console.log('dd')
+    }
+
+
     return (
         <IconWrap>
-            <Iconui onClick={() => DarkMode} iconsrc={darkMode} alt='dark mode' tips='Dark mode' />
+            <Iconui onclick={DarkMode} iconsrc={darkMode} alt='dark mode' tips='Dark mode' />
             <Iconui href='https://dribbble.com/geetest' iconsrc={dribbble} alt='dribbble' tips='团队 Dribbble' />
             <Iconui href='https://geetest.design' iconsrc={gdesign} alt='gdesign' tips='极验用户体验设计中心' />
         </IconWrap>

@@ -51,7 +51,12 @@ const typography = new Typography({
             color: fontColor.black2,
             letterSpacing: '0.01em',
             textDecoration: 'none',
-        }
+        },
+        blockquote: {
+            paddingLeft: "16px",
+            marginLeft: 0,
+            borderLeft: `4px solid ${color.gray6}`,
+        },
     })
 })
 

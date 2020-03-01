@@ -4,7 +4,7 @@ const color = {
     gray3: '#F2F5FA',  //icon bg
     gray4: '#7888A6',  //icon fill
     gray5: 'rgba(216, 221, 230, 0.6)',  //sidebar border
-    gray6: '#D8DDE6',  //article line
+    gray6: '#D8DDE6',  //article line   
     blue1: '#3973FF',
 }
 

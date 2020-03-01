@@ -2,7 +2,7 @@ import React from "react"
 import Sidebar from "./sidebar"
 import Iconui from "./iconui"
 import styled from 'styled-components';
-import { color, fontColor } from '../styles/globalStyle';
+import { color, fontColor, ease } from '../styles/globalStyle';
 
 const Container = styled.div`
     width: 100vw;
@@ -27,6 +27,14 @@ const ArticleWrap = styled.div`
      */
      align-items: center;
     flex-direction: column;
+
+    a {
+      transition: ${ease.normal};
+      &:hover {
+        text-decoration: underline;
+        color: ${color.blue1};
+      }
+    }
 `
 const Footer = styled.footer`
   display: flex;
@@ -43,6 +51,7 @@ const Footer = styled.footer`
     color: ${fontColor.black3};
   }
 `
+
 export default ({ children }) => (
   <Container>
     <Sidebar>
