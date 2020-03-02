@@ -18,7 +18,7 @@ const ArticleRelative = styled.div`
         text-decoration: none !important;
         transition: ${ease.normal};
         &:hover {
-            border-color: var(--blue1);
+            border-color: var(--blue2);
             background-color: var(--gray1);
             div{
                 color: var(--blue1);

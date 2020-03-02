@@ -23,13 +23,14 @@ date: "2020-02-14"
 
 ## 种类
 
-![text-field-1](./text-field-1.jpg)
+![text-field-1](text-field-1.jpg)
 
 ### 单行文本框
 
 在单行文本框中，当光标到达字段的右边缘时，比输入框长的文本会自动向左滚动。
 
-![text-field-2](text-field-1.jpg)
+![text-field-2](text-field-2.jpg)
+
 
 ### 多行文本域
 
@@ -37,7 +38,8 @@ date: "2020-02-14"
 
 ## 结构
 
-![](Text%20field%20%E6%96%87%E6%9C%AC%E6%A1%86/text-field-3.jpg)
+![text-field-3](text-field-3.jpg)
+
 
 1. 标签文字
 2. 前导图标 （可选）
@@ -48,4 +50,5 @@ date: "2020-02-14"
 
 ## 状态
 
-![](Text%20field%20%E6%96%87%E6%9C%AC%E6%A1%86/text-field-4.jpg)
+![text-field-4](text-field-4.jpg)
+

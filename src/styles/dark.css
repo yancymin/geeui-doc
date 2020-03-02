@@ -27,6 +27,7 @@ body.dark-mode {
   --gray5: #484e58; /*sidebar border*/
   --gray6: #484e58; /*article line*/
   --blue1: #5286ff;
+  --blue2: hsla(222, 100%, 69%, 0.5);
   --black1: #d0d2d7;
   --black2: #a2a6ad;
   --black3: #696d75;
@@ -42,6 +43,7 @@ body.dark-mode {
   --gray5: rgba(216, 221, 230, 0.6); /*sidebar border*/
   --gray6: #d8dde6; /*article line*/
   --blue1: #3973ff;
+  --blue2: hsla(222, 100%, 61%, 0.3);
   --black1: #292f3a;
   --black2: #696d75;
   --black3: #a2a6ad;

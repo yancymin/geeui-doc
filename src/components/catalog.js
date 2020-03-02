@@ -10,7 +10,7 @@ const Catalog = styled.div`
 
     &>div {
         position: absolute;
-        margin-left: 430px;
+        margin-left: 410px;
     }
 
     span {
@@ -97,13 +97,13 @@ export default props => {
                 <CatalogWrap>
                     {headingValue.map((heading, index) => (
                         <div key={index}>
-                            <a href={'#' + heading.value.toLowerCase()}>
+                            <a href={'#' + heading.value.replace(decodeURIComponent('%20'),'-')}>
                                 {(heading.depth === 2) ? heading.value : ''}
                             </a>
-                            <a href={'#' + heading.value.toLowerCase().replace(decodeURIComponent('%20'),'-')}>
+                            <a href={'#' + heading.value.replace(decodeURIComponent('%20'),'-')}>
                                 {(heading.depth === 3) ? heading.value : ''}
                             </a>
-                            <a href={'#' + heading.value.toLowerCase().replace(decodeURIComponent('%20'),'-')}>
+                            <a href={'#' + heading.value.replace(decodeURIComponent('%20'),'-')}>
                                 {(heading.depth === 4) ? heading.value : ''}
                             </a>
                         </div>

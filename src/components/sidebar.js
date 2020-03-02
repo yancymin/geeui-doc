@@ -357,34 +357,27 @@ const Title = styled.h4`
 class Sidebar extends React.Component {
     constructor(props) {
         super(props);
-        // this.handleLoad = this.handleLoad.bind(this);
+        this.handleNav = this.handleNav.bind(this);
         this.state = {
             isDark: false,
-            isToggled1: true,
-            isToggled2: true,
-            isToggled3: true,
-            isToggled4: true,
+            isToggled1: false,
+            isToggled2: false,
+            isToggled3: false,
+            isToggled4: false,
         }
     }
 
     componentDidMount() {
         (localStorage.getItem('darkMode') === 'true') ? this.setState({ isDark: true }) : this.setState({ isDark: false })
-        // window.addEventListener('load', this.handleLoad, false);
         const input = document.getElementsByTagName('input')[0];
         input.addEventListener('click', () => {
             this.setState({ isDark: !this.state.isDark });
-            console.log(this.state.isDark);
         })
     }
-    // componentWillUnmount() {
-    //     window.removeEventListener('load', this.handleLoad)
-    // }
 
-    // handleLoad() {
-    //     console.log('loaded');
-    //     (localStorage.getItem('darkMode') === 'true') ? this.setState({ isDark: true }) : this.setState({ isDark: false })
-    //     console.log(this.state.isDark);
-    // }
+    handleNav() {
+        return null
+    }
 
     render() {
         const data = this.props.data
@@ -421,7 +414,7 @@ class Sidebar extends React.Component {
                 </Logo>
 
                 < Nav >
-                    <List className={this.state.isToggled1 ? ' close' : ''} onClick={() => this.setState( {isToggled1: !this.state.isToggled1})} >
+                    <List className={this.handleNav()} onClick={() => this.setState( {isToggled1: !this.state.isToggled1})} >
                         <Title>
                             <p>
                                 {navIndex[0]}

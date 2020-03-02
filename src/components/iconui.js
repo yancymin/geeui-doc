@@ -51,7 +51,8 @@ const Icon = styled.a`
 `
 
 const IconWrap = styled.div`
-    position: absolute;
+    z-index: 999;
+    position: fixed;
     top: 24px;
     right: 40px;
     display: flex;
