@@ -17,7 +17,7 @@ const Article = styled.article`
     flex-direction: column;
     align-items: center;
     padding-top: 100px;
-    margin-left: 240px;
+    margin-left: 245px;
 `
 const ArticleWrap = styled.div`
     position: relative;
@@ -56,10 +56,8 @@ const Footer = styled.footer`
 
 export default ({ children }) => (
   <Container>
-    <Sidebar>
-    </Sidebar>
-    <Iconui>
-    </Iconui>
+    <Sidebar />
+    <Iconui />
     <Article>
       <ArticleWrap>
         {children}

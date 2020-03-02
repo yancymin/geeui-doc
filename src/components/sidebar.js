@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link, graphql, useStaticQuery } from "gatsby"
+import React, { useEffect } from 'react'
+import { Link, graphql, useStaticQuery, StaticQuery } from "gatsby"
 import { css } from "@emotion/core"
 import styled from 'styled-components';
 import { color, fontColor } from '../styles/globalStyle';
@@ -86,14 +86,11 @@ const Nav = styled.div`
 
     .close {
          display: block;
-         /* background-color: transparent; */
          border-color: transparent;
          height: 44px;
 
          a {
-             /* position: absolute; */
              opacity: 0;
-             /* display: none; */
          }
 
          h4 {
@@ -109,9 +106,7 @@ const Nav = styled.div`
 const List = styled.div`
     display: flex;
     flex-direction: column;
-    /* background-color: var(--gray2); */
     border-top: 1px solid var(--gray5);
-    /* border-bottom: 1px solid var(--gray5); */
     transition: all 1s ease;
     overflow: hidden;
     padding-bottom: 16px;
@@ -179,7 +174,7 @@ const Title = styled.h4`
     margin: 0;
     transition: all 0.25s ease;
         &:hover {
-            background-color: var(--gray5);
+            background-color: var(--gray2);
             color: var(--black1);
         }
     p {
@@ -199,140 +194,338 @@ const Title = styled.h4`
     }
 `
 
-export default () => {
-    const [isToggled, setToggled] = React.useState(false)
-    const data = useStaticQuery(graphql`
-    query {
-        allMarkdownRemark {
-          edges {
-            node {
-              frontmatter {
-                title
-              }
-              fields {
-                slug
-              }
-            }
-          }
-        }
-      }
-  `)
+// export default () => {
+//     const [isToggled, setToggled] = React.useState(false)
+//     const [isDark, setIsDark] = React.useState()
+//     const data = useStaticQuery(graphql`
+//     query {
+//         allMarkdownRemark {
+//           edges {
+//             node {
+//               frontmatter {
+//                 title
+//               }
+//               fields {
+//                 slug
+//               }
+//             }
+//           }
+//         }
+//       }
+//   `)
 
-    const navIndex = ['开始', '基本', '组件', '模式', '数据可视化', '帮助']
-    const list1 = []
-    const list2 = []
-    const list3 = []
-    const list4 = []
-    const list5 = []
-    const list6 = []
-    const lists = [list1, list2, list3, list4, list5, list6]
+//     const navIndex = ['开始', '基本', '组件', '模式', '数据可视化', '帮助']
+//     const list1 = []
+//     const list2 = []
+//     const list3 = []
+//     const list4 = []
+//     const list5 = []
+//     const list6 = []
+//     const lists = [list1, list2, list3, list4, list5, list6]
 
-    data.allMarkdownRemark.edges.map(({ node }, index) => {
-        function pushList(list, navIndex) {
-            if (node.fields.slug.includes(navIndex)) {
-                list.push(node.fields.slug)
-                return list
-            }
+//     data.allMarkdownRemark.edges.map(({ node }, index) => {
+//         function pushList(list, navIndex) {
+//             if (node.fields.slug.includes(navIndex)) {
+//                 list.push(node.fields.slug)
+//                 return list
+//             }
+//         }
+//         navIndex.forEach((item, index) => {
+//             pushList(lists[index], navIndex[index])
+//         })
+//     })
+
+//     // componentDidMount() {
+//     useEffect(() => {
+
+//         const input = document.getElementsByTagName('input')[0]
+
+
+//             // console.log('loaded')
+//             (localStorage.getItem('darkMode') === 'true') ? setIsDark(false) : setIsDark(true)
+
+
+//         input.addEventListener('click', () => {
+//             return (localStorage.getItem('darkMode') === 'true') ? setIsDark(false) : setIsDark(true)
+//         })
+
+//     })
+
+//     // 
+
+
+
+
+//     return (
+//         <Container>
+//             <Logo>
+//                 <Link to='/'>
+//                     <img alt='logo' src={`${isDark ? logoDark : logoLight}`}>
+//                     </img>
+//                 </Link>
+//                 <Tag>
+//                     V 1.0
+//                  </Tag>
+//             </Logo>
+
+//             < Nav >
+//                 <List className={`${isToggled ? ' close' : ''}`} onClick={() => setToggled(!isToggled)} >
+//                     <Title>
+//                         <p>
+//                             {navIndex[0]}
+//                         </p>
+//                         <i>
+//                         </i>
+//                     </Title>
+//                     {list1.map((item, index) => {
+//                         let text = item.replace('/' + navIndex[0] + '/', '').replace('/', '')
+//                         return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
+//                     })}
+//                 </List>
+//                 <List className={`${isToggled ? ' close' : ''}`} onClick={() => setToggled(!isToggled)} >
+//                     <Title>
+//                         <p>
+//                             {navIndex[1]}
+//                         </p>
+//                         <i>
+//                         </i>
+//                     </Title>
+//                     {list2.map((item, index) => {
+//                         let text = item.replace('/' + navIndex[1] + '/', '').replace('/', '')
+//                         return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
+//                     })}
+//                 </List>
+//                 <List className={`${isToggled ? ' close' : ''}`} onClick={() => setToggled(!isToggled)} >
+//                     <Title>
+//                         <p>
+//                             {navIndex[2]}
+//                         </p>
+//                         <i>
+//                         </i>
+//                     </Title>
+//                     {list3.map((item, index) => {
+//                         let text = item.replace('/' + navIndex[2] + '/', '').replace('/', '')
+//                         return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
+//                     })}
+//                 </List>
+//                 <List  >
+//                     <Title>
+//                         <p>
+//                             {navIndex[3]}
+//                         </p>
+//                         <i>
+//                         </i>
+//                     </Title>
+//                     {list4.map((item, index) => {
+//                         let text = item.replace('/' + navIndex[3] + '/', '').replace('/', '')
+//                         return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
+//                     })}
+//                 </List>
+//                 <List  >
+//                     <Title>
+//                         <p>
+//                             {navIndex[4]}
+//                         </p>
+//                         <i>
+//                         </i>
+//                     </Title>
+//                     {list5.map((item, index) => {
+//                         let text = item.replace('/' + navIndex[4] + '/', '').replace('/', '')
+//                         return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
+//                     })}
+//                 </List>
+//                 <List css={css`
+//                         background-color: transparent !important;
+//                      `} >
+//                     <Link activeClassName="active" to='/帮助' css={css`
+//                         padding: 0 !important;
+//                      `} >
+//                         <Title>
+//                             <p>
+//                                 {navIndex[5]}
+//                             </p>
+//                         </Title>
+//                     </Link>
+//                 </List>
+//             </Nav>
+//         </Container >
+//     )
+// }
+
+
+
+class Sidebar extends React.Component {
+    constructor(props) {
+        super(props);
+        // this.handleLoad = this.handleLoad.bind(this);
+        this.state = {
+            isDark: false,
+            isToggled1: true,
+            isToggled2: true,
+            isToggled3: true,
+            isToggled4: true,
         }
-        navIndex.forEach((item, index) => {
-            pushList(lists[index], navIndex[index])
+    }
+
+    componentDidMount() {
+        (localStorage.getItem('darkMode') === 'true') ? this.setState({ isDark: true }) : this.setState({ isDark: false })
+        // window.addEventListener('load', this.handleLoad, false);
+        const input = document.getElementsByTagName('input')[0];
+        input.addEventListener('click', () => {
+            this.setState({ isDark: !this.state.isDark });
+            console.log(this.state.isDark);
         })
-    })
+    }
+    // componentWillUnmount() {
+    //     window.removeEventListener('load', this.handleLoad)
+    // }
 
-    return (
-        <Container>
-            <Logo>
-                <Link to='/'>
-                    <img alt='logo' src={ logoLight} >
-                    </img>
-                </Link>
-                <Tag>
-                    V 1.0
-                 </Tag>
-            </Logo>
+    // handleLoad() {
+    //     console.log('loaded');
+    //     (localStorage.getItem('darkMode') === 'true') ? this.setState({ isDark: true }) : this.setState({ isDark: false })
+    //     console.log(this.state.isDark);
+    // }
 
-            < Nav >
-                <List className={`${isToggled ? ' close' : ''}`} onClick={() => setToggled(!isToggled)} >
-                    <Title>
-                        <p>
-                            {navIndex[0]}
-                        </p>
-                        <i>
-                        </i>
-                    </Title>
-                    {list1.map((item, index) => {
-                        let text = item.replace('/' + navIndex[0] + '/', '').replace('/', '')
-                        return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
-                    })}
-                </List>
-                <List className={`${isToggled ? ' close' : ''}`} onClick={() => setToggled(!isToggled)} >
-                    <Title>
-                        <p>
-                            {navIndex[1]}
-                        </p>
-                        <i>
-                        </i>
-                    </Title>
-                    {list2.map((item, index) => {
-                        let text = item.replace('/' + navIndex[1] + '/', '').replace('/', '')
-                        return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
-                    })}
-                </List>
-                <List className={`${isToggled ? ' close' : ''}`} onClick={() => setToggled(!isToggled)} >
-                    <Title>
-                        <p>
-                            {navIndex[2]}
-                        </p>
-                        <i>
-                        </i>
-                    </Title>
-                    {list3.map((item, index) => {
-                        let text = item.replace('/' + navIndex[2] + '/', '').replace('/', '')
-                        return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
-                    })}
-                </List>
-                <List  >
-                    <Title>
-                        <p>
-                            {navIndex[3]}
-                        </p>
-                        <i>
-                        </i>
-                    </Title>
-                    {list4.map((item, index) => {
-                        let text = item.replace('/' + navIndex[3] + '/', '').replace('/', '')
-                        return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
-                    })}
-                </List>
-                <List  >
-                    <Title>
-                        <p>
-                            {navIndex[4]}
-                        </p>
-                        <i>
-                        </i>
-                    </Title>
-                    {list5.map((item, index) => {
-                        let text = item.replace('/' + navIndex[4] + '/', '').replace('/', '')
-                        return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
-                    })}
-                </List>
-                <List css={css`
-                        background-color: transparent !important;
-                     `} >
-                    <Link activeClassName="active" to='/帮助' css={css`
-                        padding: 0 !important;
-                     `} >
+    render() {
+        const data = this.props.data
+        const navIndex = ['开始', '基本', '组件', '模式', '数据可视化', '帮助']
+        const list1 = []
+        const list2 = []
+        const list3 = []
+        const list4 = []
+        const list5 = []
+        const list6 = []
+        const lists = [list1, list2, list3, list4, list5, list6]
+
+        data.allMarkdownRemark.edges.map(({ node }, index) => {
+            function pushList(list, navIndex) {
+                if (node.fields.slug.includes(navIndex)) {
+                    list.push(node.fields.slug)
+                    return list
+                }
+            }
+            navIndex.forEach((item, index) => {
+                pushList(lists[index], navIndex[index])
+            })
+        })
+        return (
+            <Container>
+                <Logo>
+                    <Link to='/'>
+                        <img alt='logo' src={this.state.isDark ? logoDark : logoLight}>
+                        </img>
+                    </Link>
+                    <Tag>
+                        V 1.0
+                     </Tag>
+                </Logo>
+
+                < Nav >
+                    <List className={this.state.isToggled1 ? ' close' : ''} onClick={() => this.setState( {isToggled1: !this.state.isToggled1})} >
                         <Title>
                             <p>
-                                {navIndex[5]}
+                                {navIndex[0]}
                             </p>
+                            <i>
+                            </i>
                         </Title>
-                    </Link>
-                </List>
-            </Nav>
-        </Container >
-    )
+                        {list1.map((item, index) => {
+                            let text = item.replace('/' + navIndex[0] + '/', '').replace('/', '')
+                            return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
+                        })}
+                    </List>
+                    <List className={this.state.isToggled2 ? ' close' : ''} onClick={() => this.setState( {isToggled2: !this.state.isToggled2})} >
+                        <Title>
+                            <p>
+                                {navIndex[1]}
+                            </p>
+                            <i>
+                            </i>
+                        </Title>
+                        {list2.map((item, index) => {
+                            let text = item.replace('/' + navIndex[1] + '/', '').replace('/', '')
+                            return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
+                        })}
+                    </List>
+                    <List className={this.state.isToggled3 ? ' close' : ''} onClick={() => this.setState( {isToggled3: !this.state.isToggled3})}>
+                        <Title>
+                            <p>
+                                {navIndex[2]}
+                            </p>
+                            <i>
+                            </i>
+                        </Title>
+                        {list3.map((item, index) => {
+                            let text = item.replace('/' + navIndex[2] + '/', '').replace('/', '')
+                            return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
+                        })}
+                    </List>
+                    <List  >
+                        <Title>
+                            <p>
+                                {navIndex[3]}
+                            </p>
+                            <i>
+                            </i>
+                        </Title>
+                        {list4.map((item, index) => {
+                            let text = item.replace('/' + navIndex[3] + '/', '').replace('/', '')
+                            return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
+                        })}
+                    </List>
+                    <List  >
+                        <Title>
+                            <p>
+                                {navIndex[4]}
+                            </p>
+                            <i>
+                            </i>
+                        </Title>
+                        {list5.map((item, index) => {
+                            let text = item.replace('/' + navIndex[4] + '/', '').replace('/', '')
+                            return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
+                        })}
+                    </List>
+                    <List css={css`
+                            background-color: transparent !important;
+                         `} >
+                        <Link activeClassName="active" to='/帮助' css={css`
+                            padding: 0 !important;
+                         `} >
+                            <Title>
+                                <p>
+                                    {navIndex[5]}
+                                </p>
+                            </Title>
+                        </Link>
+                    </List>
+                </Nav>
+            </Container >
+        )
+    }
 }
 
+// export default Sidebar
 
+
+export default props => (
+    <StaticQuery
+        query={graphql`
+        query {
+                        allMarkdownRemark {
+                        edges {
+                            node {
+                            frontmatter {
+                                title
+                            }
+                            fields {
+                                slug
+                            }
+                            }
+                        }
+                        }
+                    }
+      `}
+        render={data => <Sidebar data={data} {...props} />}
+    />
+)
