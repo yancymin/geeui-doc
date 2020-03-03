@@ -1,6 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: `Gee-UI`,
+    siteUrl: 'https://gui.geetest.design',
+    description: 'Gee-UI',
+    titleTemplate: "%s · Gee-UI",
+    url: "https://gui.geetest.design", // No trailing slash allowed!
+    image: "/assets/logo-icon.png", // Path to your image you placed in the 'static' folder
+    twitterUsername: "@yancymin",
   },
   plugins: [
     {
@@ -90,6 +96,7 @@ module.exports = {
         prependToBody: false,
         color: `var(--black1)`
       }
-    }
+    },
+    `gatsby-plugin-react-helmet`
   ],
 }

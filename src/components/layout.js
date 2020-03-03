@@ -1,8 +1,10 @@
 import React from "react"
 import Sidebar from "./sidebar"
 import Iconui from "./iconui"
+import SiteMetadata from "./site-metadata"
 import styled from 'styled-components';
 import { color, fontColor, ease } from '../styles/globalStyle';
+import { Location } from '@reach/router'
 
 const Container = styled.div`
     width: 100vw;
@@ -56,6 +58,11 @@ const Footer = styled.footer`
 
 export default ({ children }) => (
   <Container>
+    <Location>
+      {({ location }) => {
+        return <SiteMetadata title={location.pathname} />
+      }}
+    </Location>
     <Sidebar />
     <Iconui />
     <Article>

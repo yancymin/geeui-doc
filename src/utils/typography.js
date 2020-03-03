@@ -16,7 +16,8 @@ const typography = new Typography({
             fontWeight: '600',
             fontSize: '40px',
             lineHeight: '40px',
-            color: `var(--black1)`
+            color: `var(--black1)`,
+            fontStyle: 'normal',
         },
         h2: {
             fontSize: '24px',
@@ -74,4 +75,4 @@ const typography = new Typography({
 })
 
 export default typography
-export const rhythm = typography.rhythm
+export const rhythm = typography.rhythm 

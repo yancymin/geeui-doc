@@ -18,8 +18,6 @@ const Heading1 = styled.h1`
 export default ({ data }) => {
     const post = data.markdownRemark
 
-    // console.log(data.allMarkdownRemark)
-
     const nodeSrc = data.allMarkdownRemark.edges.map((nodeItem) => (
         nodeItem.node.fields.slug
     ))
