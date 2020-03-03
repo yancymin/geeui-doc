@@ -40,6 +40,7 @@ const typography = new Typography({
             color: `var(--black1)`
         },
         p: {
+            fontSize: '16px',
             fontWeight: '300',
             color: `var(--black2)`,
             letterSpacing: '0.01em'
@@ -48,10 +49,11 @@ const typography = new Typography({
             marginBottom: 0
         },
         li: {
+            fontSize: '16px',
             fontWeight: '300',
             color: `var(--black2)`,
             letterSpacing: '0.01em',
-            marginBottom: '8px',
+            marginBottom: '12px',
         },
         hr: {
             backgroundColor: `var(--gray6)`,

@@ -31,7 +31,7 @@ date: "2020-02-14"
 
 允许选择（或键入）时间范围，结束时间不得小于开始时间。
 
-## 结构 
+## 结构
 
 ![time-picker-3](./time-picker-3.jpg)
 
@@ -45,3 +45,26 @@ date: "2020-02-14"
 
 ![time-picker-4](./time-picker-4.jpg)
 
+## 颜色
+
+| 色块                                                                | 名称    | 用处         | 色值    |
+| :------------------------------------------------------------------ | :------ | :----------- | :------ |
+| <span class="colorBlock" style="background-color: #3973FF;"></span> | 蓝 02   | 选中状态指示 | #3973FF |
+| <span class="colorBlock" style="background-color: #292F3A;"></span> | 灰 01   | 文字         | #292F3A |
+| <span class="colorBlock" style="background-color: #C0C4CC;"></span> | 灰 07   | 文本框描边   | #C0C4CC |
+| <span class="colorBlock" style="background-color: #F2F5FA;"></span> | 灰 13   | Hover        | #F2F5FA |
+| <span class="colorBlock" style="background-color: #7888A6;"></span> | 蓝灰 01 | 默认图标填充 | #7888A6 |
+
+## 文字
+
+| 实例       | 字号（px） | 字重    | 行间距 (px) |
+| :--------- | :--------- | :------ | :---------- |
+| 文本框文字 | 16         | Regular | 16          |
+| 时间       | 12         | Regular | 12          |
+| 动作栏     | 14         | Regular | 14          |
+
+## 阴影
+
+| 实例 | 名称    | 参数        | 颜色    |
+| :--- | :------ | :---------- | :------ |
+| 容器 | 阴影 01 | 0px 2px 4px | #CCD0D9 |

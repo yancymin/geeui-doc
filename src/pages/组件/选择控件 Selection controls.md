@@ -28,7 +28,8 @@ date: "2020-02-14"
 ![selection-controls-2](./selection-controls-2.jpg)
 
 ### Radio 单选按钮
-  当两个或多个选项的列表互斥时，将使用单选按钮，这意味着用户只能选择一个选项。
+
+当两个或多个选项的列表互斥时，将使用单选按钮，这意味着用户只能选择一个选项。
 
 ![selection-controls-3](./selection-controls-3.jpg)
 
@@ -66,3 +67,21 @@ date: "2020-02-14"
 ## 状态
 
 ![selection-controls-7](./selection-controls-7.jpg)
+
+## 风格样式
+
+## 颜色
+
+| 色块                                                                                                    | 名称    | 用处                 | 色值              |
+| :------------------------------------------------------------------------------------------------------ | :------ | :------------------- | :---------------- |
+| <span class="colorBlock" style="background: linear-gradient(180deg, #648CFF 0%, #3973FF 100%);"></span> | 渐变 02 | 填充                 | #648CFF - #3973FF |
+| <span class="colorBlock" style="background-color: #E5EDFF;"></span>                                     | 蓝灰 06 | Active 状态          | #E5EDFF           |
+| <span class="colorBlock" style="background-color: #292F3A;"></span>                                     | 灰 01   | 标签文字             | #292F3A           |
+| <span class="colorBlock" style="background-color: #C0C4CC;"></span>                                     | 灰 07   | 描边/Switch 按钮拨杆 | #C0C4CC           |
+| <span class="colorBlock" style="background-color: #F2F5FA;"></span>                                     | 灰 13   | 底色                 | #F2F5FA           |
+
+## 文字
+
+| 实例     | 字号（px） | 字重    | 行间距 (px) |
+| :------- | :--------- | :------ | :---------- |
+| 标签文字 | 14         | Regular | 14          |

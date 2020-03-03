@@ -36,3 +36,24 @@ date: "2020-02-14"
 5. 导航栏收起
 6. 导航栏收起状态-三级导航浮窗
 7. 一级导航浮窗
+
+## 风格样式
+
+## 颜色
+
+| 色块                                                                | 名称    | 用处               | 色值    |
+| :------------------------------------------------------------------ | :------ | :----------------- | :------ |
+| <span class="colorBlock" style="background-color: #C0C4CC;"></span> | 灰 07   | 描边               | #C0C4CC |
+| <span class="colorBlock" style="background-color: #3973FF;"></span> | 蓝 02   | 激活状态指示       | #3973FF |
+| <span class="colorBlock" style="background-color: #292F3A;"></span> | 灰 01   | 标签文字、内容文本 | #292F3A |
+| <span class="colorBlock" style="background-color: #F2F5FA;"></span> | 灰 13   | 按钮悬停态         | #F2F5FA |
+| <span class="colorBlock" style="background-color: #606B80;"></span> | 蓝灰 01 | 图标、图示         | #606B80 |
+
+## 文字
+
+| 实例         | 字号（px） | 字重    | 行间距 (px) |
+| :----------- | :--------- | :------ | :---------- |
+| 一级导航     | 18         | Regular | -           |
+| 二级导航     | 14         | Medium  | -           |
+| 三级导航     | 14         | Regular | 13          |
+| 三级导航浮窗 | 12         | Regular | -           |

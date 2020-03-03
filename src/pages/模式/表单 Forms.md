@@ -11,7 +11,7 @@ date: "2020-02-14"
 
 ### 占位符
 
-提供要输入的内容的提示或示例(例如YYYY-MM-DD)，方便用户理解与操作。
+提供要输入的内容的提示或示例(例如 YYYY-MM-DD)，方便用户理解与操作。
 
 ### 快速
 
@@ -52,3 +52,23 @@ date: "2020-02-14"
 ## 状态
 
 ![forms-3](forms-3.jpg)
+
+## 颜色
+
+| 色块                                                                                                     | 名称    | 用处                 | 色值              |
+| :------------------------------------------------------------------------------------------------------- | :------ | :------------------- | :---------------- |
+| <span class="colorBlock" style="background-color: #ffffff;border: 1px solid rgba(0, 0, 0, 0.1);"></span> | 白      | 特定状态下背景、按钮 | #FFFFFF           |
+| <span class="colorBlock" style="background-color: #F2F5FA;"></span>                                      | 灰 13   | 特定状态下背景       | #F2F5FA           |
+| <span class="colorBlock" style="background-color: #CBCDD1;"></span>                                      | 灰 08   | 特定状态下文字       | #CBCDD1           |
+| <span class="colorBlock" style="background-color: #C0C4CC;"></span>                                      | 灰 07   | 描边                 | #C0C4CC           |
+| <span class="colorBlock" style="background-color: #292F3A;"></span>                                      | 灰 01   | 文字                 | #292F3A           |
+| <span class="colorBlock" style="background: linear-gradient(180deg, #FFFFFF 0%, #F2F2F7 100%);"></span>  | 渐变 04 | 特定状态下按钮       | #FFFFFF - #F2F2F7 |
+| <span class="colorBlock" style="background: linear-gradient(180deg, #648CFF 0%, #3973FF 100%);"></span>  | 渐变 02 | 特定状态下按钮       | #648CFF - #3973FF |
+
+## 文字
+
+| 实例     | 字号（px） | 字重    | 行间距 (px) |
+| :------- | :--------- | :------ | :---------- |
+| 标题文本 | 16         | Regular | 16          |
+| 内容文本 | 14         | Regular | 14          |
+| 按钮文本 | 14         | Regular | 14          |

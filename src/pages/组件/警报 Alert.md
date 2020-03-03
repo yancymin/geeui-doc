@@ -54,3 +54,20 @@ date: "2020-02-14"
 ## 状态
 
 ![alert-5](alert-5.jpg)
+
+## 颜色
+
+| 色块                                                                                                     | 名称    | 用处                         | 色值    |
+| :------------------------------------------------------------------------------------------------------- | :------ | :--------------------------- | :------ |
+| <span class="colorBlock" style="background-color: #CBCDD1;border: 1px solid rgba(0, 0, 0, 0.1);"></span> | 白      | 按钮上的字体                 | #FFFFFF |
+| <span class="colorBlock" style="background-color: #7888A6;"></span>                                      | 蓝灰 01 | 取消按钮                     | #7888A6 |
+| <span class="colorBlock" style="background-color: #3973FF;"></span>                                      | 蓝 02   | 特定状态下警报框、按钮、文本 | #3973FF |
+| <span class="colorBlock" style="background-color: #F6A114;"></span>                                      | 橙 03   | 特定状态下警报框、按钮、文本 | #F6A114 |
+| <span class="colorBlock" style="background-color: #F87B3F;"></span>                                      | 橙 02   | 特定状态下警报框、按钮、文本 | #F87B3F |
+
+## 文字
+
+| 实例     | 字号（px） | 字重    | 行间距 (px) |
+| :------- | :--------- | :------ | :---------- |
+| 内容文本 | 14         | Regular | 14          |
+| 按钮文本 | 12         | Regular | 12          |

@@ -49,3 +49,46 @@ body.dark-mode {
   --black3: #a2a6ad;
   --bg: #ffffff;
 }
+
+.colorBlock {
+  border-radius: 2px;
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
+th {
+  color: var(--black1);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+td {
+  color: var(--black2);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+td .gatsby-resp-image-background-image {
+  width: 160px !important;
+}
+
+td,
+th {
+  border-color: var(--gray5);
+  font-family: -apple-system, Pingfang SC, sans-serif;
+}
+
+th:first-child,
+td:first-child {
+  padding-left: 24px;
+}
+
+tr:hover {
+  background-color: var(--gray1);
+}
+
+th,
+td {
+  padding: 14px 6px;
+}

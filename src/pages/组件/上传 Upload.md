@@ -51,3 +51,20 @@ date: "2020-02-14"
 ## 状态
 
 ![upload-4](upload-4.jpg)
+
+## 颜色
+
+| 色块                                                                                                     | 名称  | 用处                            | 色值    |
+| :------------------------------------------------------------------------------------------------------- | :---- | :------------------------------ | :------ |
+| <span class="colorBlock" style="background-color: #CBCDD1;border: 1px solid rgba(0, 0, 0, 0.1);"></span> | 白    | 按钮上的字体、附图              | #FFFFFF |
+| <span class="colorBlock" style="background-color: #F2F5FA;"></span>                                      | 灰 13 | 特定状态下集装箱颜色            | #F2F5FA |
+| <span class="colorBlock" style="background-color: #A2A6AD;"></span>                                      | 灰 05 | 特定状态下文字                  | #A2A6AD |
+| <span class="colorBlock" style="background-color: #3973FF;"></span>                                      | 蓝 02 | 特定状态下文字·集装箱颜色、附图 | #3973FF |
+
+## 文字
+
+| 实例     | 字号（px） | 字重    | 行间距 (px) |
+| :------- | :--------- | :------ | :---------- |
+| 内容文本 | 16         | Regular | 16          |
+| 辅助信息 | 14         | Regular | 14          |
+| 按钮文本 | 12         | Regular | 12          |

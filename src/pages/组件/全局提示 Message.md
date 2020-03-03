@@ -57,3 +57,25 @@ date: "2020-02-14"
 
 ![message-6](./message-6.jpg)
 
+## 颜色
+
+| 色块                                                          | 名称  | 用处     | 色值    |
+| :------------------------------------------------------------ | :---- | :------- | :------ |
+| <span class="colorBlock" style="background: #00C6B7;"></span> | 灰 01 | 按钮文字 | #00C6B7 |
+| <span class="colorBlock" style="background: #7888A6;"></span> | 灰 01 | 按钮文字 | #7888A6 |
+| <span class="colorBlock" style="background: #FFBD38;"></span> | 灰 01 | 按钮文字 | #FFBD38 |
+| <span class="colorBlock" style="background: #F87B3F;"></span> | 灰 01 | 按钮文字 | #F87B3F |
+| <span class="colorBlock" style="background: #292F3A;"></span> | 灰 01 | 按钮文字 | #292F3A |
+| <span class="colorBlock" style="background: #7B818D;"></span> | 灰 01 | 按钮文字 | #7B818D |
+
+## 文字
+
+| 实例     | 字号（px） | 字重   | 行间距 (px) |
+| :------- | :--------- | :----- | :---------- |
+| 提示文字 | 14         | Medium | 14          |
+
+## 阴影
+
+| 实例 | 名称    | 参数          | 颜色        |
+| :--- | :------ | :------------ | :---------- |
+| 容器 | 阴影 03 | 0px 12px 29px | #292F3A/40% |

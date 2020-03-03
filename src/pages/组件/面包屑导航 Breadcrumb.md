@@ -40,3 +40,17 @@ date: "2020-02-14"
 ## 状态
 
 ![breadcrumb-3](breadcrumb-3.jpg)
+
+## 颜色
+
+| 色块                                                                | 名称  | 用处               | 色值    |
+| :------------------------------------------------------------------ | :---- | :----------------- | :------ |
+| <span class="colorBlock" style="background-color: #CBCDD1;"></span> | 灰 05 | 箭头               | #A2A6AD |
+| <span class="colorBlock" style="background-color: #292F3A;"></span> | 灰 01 | 特定状态下的背景色 | #292F3A |
+| <span class="colorBlock" style="background-color: #7B818D;"></span> | 灰 03 | 特定状态下文字     | #7B818D |
+
+## 文字
+
+| 实例     | 字号（px） | 字重    | 行间距 (px) |
+| :------- | :--------- | :------ | :---------- |
+| 内容文本 | 16         | Regular | 16          |

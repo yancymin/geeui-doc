@@ -52,3 +52,20 @@ date: "2020-02-14"
 ## 状态
 
 ![empty-states-5](empty-states-5.jpg)
+
+## 颜色
+
+| 色块                                                                                                     | 名称  | 用处   | 色值    |
+| :------------------------------------------------------------------------------------------------------- | :---- | :----- | :------ |
+| <span class="colorBlock" style="background-color: #CBCDD1;border: 1px solid rgba(0, 0, 0, 0.1);"></span> | 白    | 背景色 | #FFFFFF |
+| <span class="colorBlock" style="background-color: #D8DDE6;"></span>                                      | 灰 10 | 图标   | #D8DDE6 |
+| <span class="colorBlock" style="background-color: #292F3A;"></span>                                      | 灰 01 | 文字   | #292F3A |
+| <span class="colorBlock" style="background-color: #696D75;"></span>                                      | 灰 02 | 文本   | #696D75 |
+
+## 文字
+
+| 实例     | 字号（px） | 字重    | 行间距 (px) |
+| :------- | :--------- | :------ | :---------- |
+| 标题文本 | 18         | Regular | 18          |
+| 内容文本 | 14         | Regular | 14          |
+| 按钮文本 | 12         | Regular | 12          |

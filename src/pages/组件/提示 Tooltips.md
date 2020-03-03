@@ -52,3 +52,18 @@ date: "2020-02-14"
 ## 状态
 
 ![tooltips-5](tooltips-5.jpg)
+
+## 颜色
+
+| 色块                                                                                              | 名称  | 用处               | 色值    |
+| :------------------------------------------------------------------------------------------------ | :---- | :----------------- | :------ |
+| <span class="colorBlock" style="background:#FFFFFF;border: 1px solid rgba(0, 0, 0, 0.1);"></span> | 白    | 特定状态下的文字   | #FFFFFF |
+| <span class="colorBlock" style="background-color: #CBCDD1;"></span>                               | 灰 08 | 特定状态下的文字   | #CBCDD1 |
+| <span class="colorBlock" style="background-color: #292F3A;"></span>                               | 灰 01 | 特定状态下的背景色 | #292F3A |
+| <span class="colorBlock" style="background-color: #696D75;"></span>                               | 灰 02 | 特定状态下的背景色 | #696D75 |
+
+## 文字
+
+| 实例     | 字号（px） | 字重    | 行间距 (px) |
+| :------- | :--------- | :------ | :---------- |
+| 内容文本 | 12         | Regular | 12          |

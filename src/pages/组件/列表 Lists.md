@@ -67,4 +67,22 @@ date: "2020-02-14"
 
 ![lists-7](./lists-7.jpg)
 
+## 颜色
 
+| 色块                                                                                                    | 名称    | 用处          | 色值              |
+| :------------------------------------------------------------------------------------------------------ | :------ | :------------ | :---------------- |
+| <span class="colorBlock" style="background: linear-gradient(180deg, #648CFF 0%, #3973FF 100%);"></span> | 渐变 02 | Checkbox      | #648CFF - #3973FF |
+| <span class="colorBlock" style="background-color: #3973FF;"></span>                                     | 蓝 02   | 选中状态指示  | #3973FF           |
+| <span class="colorBlock" style="background-color: #E5EDFF;"></span>                                     | 蓝灰 06 | Selected 状态 | #E5EDFF           |
+| <span class="colorBlock" style="background-color: #F2F5FA;"></span>                                     | 灰 13   | Hover         | #F2F5FA           |
+| <span class="colorBlock" style="background-color: #292F3A;"></span>                                     | 灰 01   | 选中文字      | #292F3A           |
+| <span class="colorBlock" style="background-color: #696D75;"></span>                                     | 灰 02   | 普通文字      | #696D75           |
+
+## 文字
+
+| 实例               | 字号（px） | 字重    | 行间距 (px) |
+| :----------------- | :--------- | :------ | :---------- |
+| 分类选择列表选项   | 12         | Regular | 12          |
+| 分类选择列表副标题 | 12         | Regular | 12          |
+| 选项文字           | 14         | Regular | 14          |
+| 多选列表选项文字   | 16         | Regular | 16          |

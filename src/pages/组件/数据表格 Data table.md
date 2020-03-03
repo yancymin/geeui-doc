@@ -53,3 +53,25 @@ date: "2020-02-14"
 4. 固定操作浮窗
 5. 操作按钮
 6. 操作项菜单
+
+## 颜色
+
+| 色块                                                                                                    | 名称    | 用处       | 色值              |
+| :------------------------------------------------------------------------------------------------------ | :------ | :--------- | :---------------- |
+| <span class="colorBlock" style="background: linear-gradient(180deg, #648CFF 0%, #3973FF 100%);"></span> | 渐变 02 | 按钮填充   | #648CFF - #3973FF |
+| <span class="colorBlock" style="background-color: #3973FF;"></span>                                     | 蓝 02   | 定位点     | #3973FF           |
+| <span class="colorBlock" style="background-color: #E6EDFF;"></span>                                     | 灰色 06 | 定位点外围 | #E6EDFF           |
+| <span class="colorBlock" style="background-color: #292F3A;"></span>                                     | 灰 01   | 文字       | #292F3A           |
+
+## 文字
+
+| 实例     | 字号（px） | 字重    | 行间距 (px) |
+| :------- | :--------- | :------ | :---------- |
+| 标签文字 | 12         | Regular | 12          |
+| 标签文字 | 14         | Regular | 14          |
+
+## 阴影
+
+| 实例 | 名称    | 参数        | 颜色    |
+| :--- | :------ | :---------- | :------ |
+| 容器 | 阴影 01 | 0px 2px 4px | #CCD0D9 |

@@ -31,7 +31,6 @@ date: "2020-02-14"
 
 ![text-field-2](text-field-2.jpg)
 
-
 ### 多行文本域
 
 多行文本框是固定高度，文本自动换行，当光标到达字段底部时垂直滚动。
@@ -39,7 +38,6 @@ date: "2020-02-14"
 ## 结构
 
 ![text-field-3](text-field-3.jpg)
-
 
 1. 标签文字
 2. 前导图标 （可选）
@@ -52,3 +50,22 @@ date: "2020-02-14"
 
 ![text-field-4](text-field-4.jpg)
 
+## 风格样式
+
+## 颜色
+
+| 色块                                                                | 名称  | 用处               | 色值    |
+| :------------------------------------------------------------------ | :---- | :----------------- | :------ |
+| <span class="colorBlock" style="background-color: #C0C4CC;"></span> | 灰 07 | 描边               | #C0C4CC |
+| <span class="colorBlock" style="background-color: #3973FF;"></span> | 蓝 02 | 激活状态指示       | #3973FF |
+| <span class="colorBlock" style="background-color: #292F3A;"></span> | 灰 01 | 标签文字、内容文本 | #292F3A |
+| <span class="colorBlock" style="background-color: #F2F5FA;"></span> | 灰 13 | 按钮悬停态         | #F2F5FA |
+| <span class="colorBlock" style="background-color: #DD1A32;"></span> | 红 01 | 错误信息           | #DD1A32 |
+
+## 文字
+
+| 实例     | 字号（px） | 字重    | 行间距 (px) |
+| :------- | :--------- | :------ | :---------- |
+| 标签文字 | 16         | Regular | 16          |
+| 输入文本 | 16         | Regular | 23          |
+| 辅助信息 | 14         | Regular | 13          |

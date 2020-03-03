@@ -52,3 +52,18 @@ date: "2020-02-14"
 ## 状态
 
 ![tab-4](tab-4.jpg)
+
+## 颜色
+
+| 色块                                                                | 名称  | 用处                   | 色值    |
+| :------------------------------------------------------------------ | :---- | :--------------------- | :------ |
+| <span class="colorBlock" style="background:#D8DDE6"></span>         | 灰 07 | 描边                   | #D8DDE6 |
+| <span class="colorBlock" style="background-color: #3973FF;"></span> | 蓝 02 | 激活状态指示、内容文本 | #3973FF |
+| <span class="colorBlock" style="background-color: #292F3A;"></span> | 灰 01 | 标签文字、内容文本     | #292F3A |
+| <span class="colorBlock" style="background-color: #F2F5FA;"></span> | 灰 13 | 特定状态下的背景色     | #F2F5FA |
+
+## 文字
+
+| 实例     | 字号（px） | 字重    | 行间距 (px) |
+| :------- | :--------- | :------ | :---------- |
+| 内容文本 | 14         | Regular | 14          |

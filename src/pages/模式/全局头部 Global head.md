@@ -23,7 +23,6 @@ date: "2020-02-14"
 右边设置有「消息」和「通知」以及「个人中心」
 方便用户在全局的状态下查收和设置
 
-
 ## 结构
 
 ![global-head-2](global-head-2.jpg)
@@ -37,3 +36,24 @@ date: "2020-02-14"
 ## 状态
 
 ![global-head-3](global-head-3.jpg)
+
+## 颜色
+
+| 色块                                                                | 名称    | 用处     | 色值    |
+| :------------------------------------------------------------------ | :------ | :------- | :------ |
+| <span class="colorBlock" style="background-color: #3973FF;"></span> | 蓝 02   | 标志颜色 | #3973FF |
+| <span class="colorBlock" style="background-color: #292F3A;"></span> | 灰 01   | 文字颜色 | #292F3A |
+| <span class="colorBlock" style="background-color: #7888A6;"></span> | 灰蓝 01 | 图标颜色 | #7888A6 |
+| <span class="colorBlock" style="background-color: #F2F5FA;"></span> | 灰 13   | 图标悬停 | #F2F5FA |
+
+## 文字
+
+| 实例     | 字号（px） | 字重    | 行间距 (px) |
+| :------- | :--------- | :------ | :---------- |
+| 提示文字 | 14         | Regular | 14          |
+
+## 阴影
+
+| 实例 | 名称    | 参数        | 颜色    |
+| :--- | :------ | :---------- | :------ |
+| 容器 | 阴影 01 | 0px 2px 4px | #CCD0D9 |
