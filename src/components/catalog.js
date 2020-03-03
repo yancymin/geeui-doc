@@ -17,7 +17,7 @@ const Catalog = styled.div`
         display: flex;
         align-items: center;
         color: var(--black2);
-        font-weight: 500;
+        font-weight: 400;
         font-size: 14px;
         line-height: 14px;
         margin-bottom: 14px;
@@ -43,7 +43,7 @@ const CatalogWrap = styled.div`
 
     a {
         color: var(--black2);
-        font-weight: 300;
+        font-weight: 200;
         font-size: 14px;
         line-height: 14px;
         white-space: nowrap;

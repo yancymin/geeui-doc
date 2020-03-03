@@ -114,11 +114,11 @@ const List = styled.div`
 
     .active {
         color: var(--blue1);
-        font-weight: 500;
+        font-weight: 400;
 
         p {
             color: var(--blue1);
-            font-weight: 500;
+            font-weight: 400;
         }
 
         &:before {
@@ -134,7 +134,7 @@ const List = styled.div`
 
         &:hover {
             color: var(--blue1);
-            font-weight: 500;
+            font-weight: 400;
         }
     }
 
@@ -147,7 +147,7 @@ const List = styled.div`
         justify-content: space-between;
         align-items: center;
         padding: 0 12px 0 40px;
-        font-weight: 300;
+        font-weight: 200;
         font-size: 14px;
         line-height: 14px;
         margin: 0;
@@ -178,7 +178,7 @@ const Title = styled.h4`
             color: var(--black1);
         }
     p {
-        font-weight: 500;
+        font-weight: 400;
         font-size: 14px;
         line-height: 14px;
         margin: 0;

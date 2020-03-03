@@ -60,13 +60,13 @@ body.dark-mode {
 th {
   color: var(--black1);
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 td {
   color: var(--black2);
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 200;
 }
 
 td .gatsby-resp-image-background-image {
@@ -76,7 +76,7 @@ td .gatsby-resp-image-background-image {
 td,
 th {
   border-color: var(--gray5);
-  font-family: -apple-system, Pingfang SC, sans-serif;
+  font-family: source-han-sans-simplified-c, sans-serif;
 }
 
 th:first-child,

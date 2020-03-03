@@ -3,7 +3,7 @@ module.exports = {
     title: `Gee-UI`,
     siteUrl: 'https://gui.geetest.design',
     description: 'Gee-UI',
-    titleTemplate: "%s · Gee-UI",
+    titleTemplate: "%s | Gee-UI",
     url: "https://gui.geetest.design", // No trailing slash allowed!
     image: "/assets/logo-icon.png", // Path to your image you placed in the 'static' folder
     twitterUsername: "@yancymin",

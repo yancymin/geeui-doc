@@ -1,19 +1,18 @@
 import Typography from "typography"
-import { color, fontColor } from "../styles/globalStyle"
 
 const typography = new Typography({
     title: 'GEEUI',
     baseFontSize: '16px',
     baseLineHeight: 1.66,
-    headerFontFamily: ['-apple-system', 'sans-serif'],
-    bodyFontFamily: ['-apple-system', 'sans-serif'],
+    headerFontFamily: ['source-han-sans-simplified-c', 'sans-serif'],
+    bodyFontFamily: ['source-han-sans-simplified-c', 'sans-serif'],
     includeNormalize: true,
     overrideStyles: () => ({
         img: {
             margin: '0'
         },
         h1: {
-            fontWeight: '600',
+            fontWeight: '400',
             fontSize: '40px',
             lineHeight: '40px',
             color: `var(--black1)`,
@@ -22,27 +21,27 @@ const typography = new Typography({
         h2: {
             fontSize: '24px',
             lineHeight: '24px',
-            fontWeight: '500',
+            fontWeight: '400',
             margin: '48px 0 32px 0',
             color: `var(--black1)`
         },
         h3: {
             fontSize: '18px',
             lineHeight: '18px',
-            fontWeight: '500',
+            fontWeight: '400',
             margin: '32px 0 24px 0',
             color: `var(--black1)`
         },
         h4: {
             fontSize: '16px',
             lineHeight: '16x',
-            fontWeight: '500',
+            fontWeight: '400',
             margin: '24px 0 16px 0',
             color: `var(--black1)`
         },
         p: {
             fontSize: '16px',
-            fontWeight: '300',
+            fontWeight: '200',
             color: `var(--black2)`,
             letterSpacing: '0.01em'
         },
@@ -51,7 +50,7 @@ const typography = new Typography({
         },
         li: {
             fontSize: '16px',
-            fontWeight: '300',
+            fontWeight: '200',
             color: `var(--black2)`,
             letterSpacing: '0.01em',
             marginBottom: '12px',
@@ -61,7 +60,7 @@ const typography = new Typography({
             margin: '32px 0 48px 0'
         },
         a: {
-            fontWeight: '300',
+            fontWeight: '200',
             color: `var(--black2)`,
             letterSpacing: '0.01em',
             textDecoration: 'none',

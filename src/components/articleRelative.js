@@ -33,7 +33,7 @@ const ArticleRelative = styled.div`
         font-size: 12px;
         line-height: 12px;
         color: var(--black2);
-        font-weight: 300;
+        font-weight: 200;
         margin-bottom: 16px;
     }
 
@@ -100,7 +100,7 @@ const Right = styled(Link)`
     }
 `
 const ArticleNav = styled.div`
-    font-weight: 300;
+    font-weight: 200;
     font-size: 18px;
     line-height: 18px;
     color: var(--black1);
@@ -132,6 +132,11 @@ export default props => {
 
     const navIndex = ['开始', '基本', '组件', '模式', '数据可视化', '帮助']
 
+    const title = () => {
+        const newTitle = props.node.replace(/^\//g, '').replace(/\/$/g, '').replace('/', ' ');
+        return decodeURIComponent(newTitle)
+    }
+
     return (
         <ArticleRelative >
             <Left to={decodeURIComponent(props.node)}>
@@ -139,15 +144,15 @@ export default props => {
                     上一篇
                 </span>
                 <ArticleNav>
-                    {decodeURIComponent(props.node)}
+                    {title()}
                 </ArticleNav>
             </Left>
             <Right to='/'>
                 <span>
-                    上一篇
+                    下一篇
                 </span>
                 <ArticleNav>
-                    {decodeURIComponent(props.node)}
+                    {title()}
                 </ArticleNav>
             </Right >
         </ArticleRelative >

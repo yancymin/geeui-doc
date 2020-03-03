@@ -2,6 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import logoIcon from '../assets/logo-icon.png'
 const SEO = (props, { title, description, image, pathname, article }) => (
   <StaticQuery
     query={query}
@@ -19,18 +20,21 @@ const SEO = (props, { title, description, image, pathname, article }) => (
     }) => {
       const titleCompt = () => {
         let title = decodeURIComponent(props.title);
-        let newTitle = title.replace(/^\//g, '').replace(/\/$/g, '').replace('/','-')
+        let newTitle = title.replace(/^\//g, '').replace(/\/$/g, '').replace('/', '-')
         return newTitle
       };
       const seo = {
         title: titleCompt() || defaultTitle,
         description: description || defaultDescription,
-        image: `${siteUrl}${image || defaultImage}`,
+        image: logoIcon,
         url: `${siteUrl}${pathname || "/"}`,
       }
       return (
         <>
           <Helmet title={seo.title} titleTemplate={titleTemplate}>
+            <script>
+              {props.adobeFont}
+            </script>
             <meta name="description" content={seo.description} />
             <meta name="image" content={seo.image} />
             {seo.url && <meta property="og:url" content={seo.url} />}
