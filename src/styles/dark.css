@@ -10,6 +10,10 @@
   background-color: var(--gray5);
 }
 
+:focus {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
 body {
   transition: all 0.2s ease;
 }

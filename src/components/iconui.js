@@ -20,6 +20,7 @@ const Icon = styled.a`
     border: 2px solid transparent;
     transition: ${ease.easeOutQuart(`0.2s`)};
 
+    
     &:hover {
         border-color: var(--gray6);
         span {
@@ -82,6 +83,10 @@ const IconWrap = styled.div`
                 transform: perspective(80px) rotateX(0) scaleY(1);
             }
         }
+                
+        &:focus {
+            outline: -webkit-focus-ring-color auto 5px;
+        }
 
         &:active {
             transform: scale(0.8);
@@ -126,7 +131,7 @@ const Iconui = props => (
 )
 
 const Toggle = ({ checked, onChange }) => (
-    <div className="toggle-control">
+    <button className="toggle-control">
         <input
             className="dmcheck"
             type="checkbox"
@@ -134,7 +139,7 @@ const Toggle = ({ checked, onChange }) => (
             onChange={onChange}
             id="dmcheck"
         />
-    </div>
+    </button>
 );
 
 

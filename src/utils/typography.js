@@ -66,9 +66,10 @@ const typography = new Typography({
             textDecoration: 'none',
         },
         blockquote: {
-            paddingLeft: "16px",
+            padding:"16px",
             marginLeft: 0,
             borderLeft: `4px solid var(--gray6)`,
+            background: 'var(--gray1)'
         }
     })
 })

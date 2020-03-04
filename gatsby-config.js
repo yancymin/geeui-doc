@@ -92,7 +92,7 @@ module.exports = {
       options: {
         includePaths: ["/", { regex: "^/" }],
         excludePaths: [],
-        height: 3,
+        height: 4,
         prependToBody: false,
         color: `var(--black1)`
       }

@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import arrowLeft from '../assets/arrow_left.svg';
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { color, fontColor, ease } from '../styles/globalStyle';
+import { router2 } from './routerData.js'
 
 const ArticleRelative = styled.div`
     width: 100%;
@@ -137,24 +138,36 @@ export default props => {
         return decodeURIComponent(newTitle)
     }
 
+    let up, down;
+
+    // let current = title().replace(/\S+\s+/, '')
+    let current = '/' + title().replace(' ', '/')
+    up = router2[router2.indexOf(current) - 1]
+    down = router2[router2.indexOf(current) + 1]
+
+    const LeftCom = () => (
+        current.includes('关于 Gee-UI') ? null : <Left to={(current === '/帮助') ? router2[router2.length - 2] : up} >
+            <span>
+                上一篇
+        </span>
+            {(current === '/帮助') ? <ArticleNav>{router2[router2.length - 2].replace('/', '').replace('/', ' - ')}</ArticleNav> : <ArticleNav>{up.replace('/', '').replace('/', ' - ')}</ArticleNav>}
+        </Left >
+    )
+    const RightCom = () => (
+        current.includes('帮助') ? null : <Right to={down}>
+            <span>
+                下一篇
+</span>
+            <ArticleNav>
+                {down.replace('/', '').replace('/', ' - ')}
+            </ArticleNav>
+        </Right >
+    )
+
     return (
         <ArticleRelative >
-            <Left to={decodeURIComponent(props.node)}>
-                <span>
-                    上一篇
-                </span>
-                <ArticleNav>
-                    {title()}
-                </ArticleNav>
-            </Left>
-            <Right to='/'>
-                <span>
-                    下一篇
-                </span>
-                <ArticleNav>
-                    {title()}
-                </ArticleNav>
-            </Right >
+            <LeftCom />
+            {(current == '/帮助') ? null : <RightCom />}
         </ArticleRelative >
     )
 }

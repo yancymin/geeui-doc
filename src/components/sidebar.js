@@ -6,6 +6,7 @@ import { color, fontColor } from '../styles/globalStyle';
 import logoLight from '../assets/logo.svg';
 import logoDark from '../assets/logo2.svg';
 import arrowDown from '../assets/arrow_down.svg';
+import { router } from './routerData.js'
 
 const Container = styled.div`
     position: fixed;
@@ -194,166 +195,6 @@ const Title = styled.h4`
     }
 `
 
-// export default () => {
-//     const [isToggled, setToggled] = React.useState(false)
-//     const [isDark, setIsDark] = React.useState()
-//     const data = useStaticQuery(graphql`
-//     query {
-//         allMarkdownRemark {
-//           edges {
-//             node {
-//               frontmatter {
-//                 title
-//               }
-//               fields {
-//                 slug
-//               }
-//             }
-//           }
-//         }
-//       }
-//   `)
-
-//     const navIndex = ['开始', '基本', '组件', '模式', '数据可视化', '帮助']
-//     const list1 = []
-//     const list2 = []
-//     const list3 = []
-//     const list4 = []
-//     const list5 = []
-//     const list6 = []
-//     const lists = [list1, list2, list3, list4, list5, list6]
-
-//     data.allMarkdownRemark.edges.map(({ node }, index) => {
-//         function pushList(list, navIndex) {
-//             if (node.fields.slug.includes(navIndex)) {
-//                 list.push(node.fields.slug)
-//                 return list
-//             }
-//         }
-//         navIndex.forEach((item, index) => {
-//             pushList(lists[index], navIndex[index])
-//         })
-//     })
-
-//     // componentDidMount() {
-//     useEffect(() => {
-
-//         const input = document.getElementsByTagName('input')[0]
-
-
-//             // console.log('loaded')
-//             (localStorage.getItem('darkMode') === 'true') ? setIsDark(false) : setIsDark(true)
-
-
-//         input.addEventListener('click', () => {
-//             return (localStorage.getItem('darkMode') === 'true') ? setIsDark(false) : setIsDark(true)
-//         })
-
-//     })
-
-//     // 
-
-
-
-
-//     return (
-//         <Container>
-//             <Logo>
-//                 <Link to='/'>
-//                     <img alt='logo' src={`${isDark ? logoDark : logoLight}`}>
-//                     </img>
-//                 </Link>
-//                 <Tag>
-//                     V 1.0
-//                  </Tag>
-//             </Logo>
-
-//             < Nav >
-//                 <List className={`${isToggled ? ' close' : ''}`} onClick={() => setToggled(!isToggled)} >
-//                     <Title>
-//                         <p>
-//                             {navIndex[0]}
-//                         </p>
-//                         <i>
-//                         </i>
-//                     </Title>
-//                     {list1.map((item, index) => {
-//                         let text = item.replace('/' + navIndex[0] + '/', '').replace('/', '')
-//                         return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
-//                     })}
-//                 </List>
-//                 <List className={`${isToggled ? ' close' : ''}`} onClick={() => setToggled(!isToggled)} >
-//                     <Title>
-//                         <p>
-//                             {navIndex[1]}
-//                         </p>
-//                         <i>
-//                         </i>
-//                     </Title>
-//                     {list2.map((item, index) => {
-//                         let text = item.replace('/' + navIndex[1] + '/', '').replace('/', '')
-//                         return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
-//                     })}
-//                 </List>
-//                 <List className={`${isToggled ? ' close' : ''}`} onClick={() => setToggled(!isToggled)} >
-//                     <Title>
-//                         <p>
-//                             {navIndex[2]}
-//                         </p>
-//                         <i>
-//                         </i>
-//                     </Title>
-//                     {list3.map((item, index) => {
-//                         let text = item.replace('/' + navIndex[2] + '/', '').replace('/', '')
-//                         return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
-//                     })}
-//                 </List>
-//                 <List  >
-//                     <Title>
-//                         <p>
-//                             {navIndex[3]}
-//                         </p>
-//                         <i>
-//                         </i>
-//                     </Title>
-//                     {list4.map((item, index) => {
-//                         let text = item.replace('/' + navIndex[3] + '/', '').replace('/', '')
-//                         return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
-//                     })}
-//                 </List>
-//                 <List  >
-//                     <Title>
-//                         <p>
-//                             {navIndex[4]}
-//                         </p>
-//                         <i>
-//                         </i>
-//                     </Title>
-//                     {list5.map((item, index) => {
-//                         let text = item.replace('/' + navIndex[4] + '/', '').replace('/', '')
-//                         return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
-//                     })}
-//                 </List>
-//                 <List css={css`
-//                         background-color: transparent !important;
-//                      `} >
-//                     <Link activeClassName="active" to='/帮助' css={css`
-//                         padding: 0 !important;
-//                      `} >
-//                         <Title>
-//                             <p>
-//                                 {navIndex[5]}
-//                             </p>
-//                         </Title>
-//                     </Link>
-//                 </List>
-//             </Nav>
-//         </Container >
-//     )
-// }
-
-
-
 class Sidebar extends React.Component {
     constructor(props) {
         super(props);
@@ -380,27 +221,29 @@ class Sidebar extends React.Component {
     }
 
     render() {
-        const data = this.props.data
-        const navIndex = ['开始', '基本', '组件', '模式', '数据可视化', '帮助']
-        const list1 = []
-        const list2 = []
-        const list3 = []
-        const list4 = []
-        const list5 = []
-        const list6 = []
-        const lists = [list1, list2, list3, list4, list5, list6]
+        // const data = this.props.data
+        // const navIndex = ['开始', '基本', '组件', '模式', '数据可视化', '帮助']
+        // const list1 = []
+        // const list2 = []
+        // const list3 = []
+        // const list4 = []
+        // const list5 = []
+        // const list6 = []
+        // const lists = [list1, list2, list3, list4, list5, list6]
 
-        data.allMarkdownRemark.edges.map(({ node }, index) => {
-            function pushList(list, navIndex) {
-                if (node.fields.slug.includes(navIndex)) {
-                    list.push(node.fields.slug)
-                    return list
-                }
-            }
-            navIndex.forEach((item, index) => {
-                pushList(lists[index], navIndex[index])
-            })
-        })
+        // data.allMarkdownRemark.edges.map(({ node }, index) => {
+        //     function pushList(list, navIndex) {
+        //         if (node.fields.slug.includes(navIndex)) {
+        //             list.push(node.fields.slug)
+        //             return list
+        //         }
+        //     }
+        //     navIndex.forEach((item, index) => {
+        //         pushList(lists[index], navIndex[index])
+        //     })
+        // })
+
+
         return (
             <Container>
                 <Logo>
@@ -414,20 +257,70 @@ class Sidebar extends React.Component {
                 </Logo>
 
                 < Nav >
-                    <List className={this.handleNav()} onClick={() => this.setState( {isToggled1: !this.state.isToggled1})} >
+                    <List >
                         <Title>
                             <p>
-                                {navIndex[0]}
+                                开始
                             </p>
                             <i>
                             </i>
                         </Title>
-                        {list1.map((item, index) => {
-                            let text = item.replace('/' + navIndex[0] + '/', '').replace('/', '')
-                            return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
+                        {router.开始.map((item, index) => {
+                            return (<Link key={index} activeClassName="active" to={'/' + '开始' + '/' + item} >{item}</Link>)
                         })}
                     </List>
-                    <List className={this.state.isToggled2 ? ' close' : ''} onClick={() => this.setState( {isToggled2: !this.state.isToggled2})} >
+                    <List >
+                        <Title>
+                            <p>
+                                基本
+                            </p>
+                            <i>
+                            </i>
+                        </Title>
+                        {router.基本.map((item, index) => {
+                            return (<Link key={index} activeClassName="active" to={'/' + '基本' + '/' + item} >{item}</Link>)
+                        })}
+                    </List>
+                    <List >
+                        <Title>
+                            <p>
+                                组件
+                            </p>
+                            <i>
+                            </i>
+                        </Title>
+                        {router.组件.map((item, index) => {
+                            return (<Link key={index} activeClassName="active" to={'/' + '组件' + '/' + item} >{item}</Link>)
+                        })}
+                    </List>
+                    <List >
+                        <Title>
+                            <p>
+                                模式
+                            </p>
+                            <i>
+                            </i>
+                        </Title>
+                        {router.模式.map((item, index) => {
+                            return (<Link key={index} activeClassName="active" to={'/' + '模式' + '/' + item} >{item}</Link>)
+                        })}
+                    </List>
+                    <List >
+                        <Title>
+                            <p>
+                                数据可视化
+                            </p>
+                            <i>
+                            </i>
+                        </Title>
+                        {router.数据可视化.map((item, index) => {
+                            return (<Link key={index} activeClassName="active" to={'/' + '数据可视化' + '/' + item} >{item}</Link>)
+                        })}
+                    </List>
+                    <List >
+                        <Link activeClassName="active" to={'/' + '帮助'} >帮助</Link>
+                    </List>
+                    {/* <List className={this.state.isToggled2 ? ' close' : ''} onClick={() => this.setState({ isToggled2: !this.state.isToggled2 })} >
                         <Title>
                             <p>
                                 {navIndex[1]}
@@ -440,7 +333,7 @@ class Sidebar extends React.Component {
                             return (<Link key={index} activeClassName="active" to={item} >{text}</Link>)
                         })}
                     </List>
-                    <List className={this.state.isToggled3 ? ' close' : ''} onClick={() => this.setState( {isToggled3: !this.state.isToggled3})}>
+                    <List className={this.state.isToggled3 ? ' close' : ''} onClick={() => this.setState({ isToggled3: !this.state.isToggled3 })}>
                         <Title>
                             <p>
                                 {navIndex[2]}
@@ -491,7 +384,7 @@ class Sidebar extends React.Component {
                                 </p>
                             </Title>
                         </Link>
-                    </List>
+                    </List> */}
                 </Nav>
             </Container >
         )

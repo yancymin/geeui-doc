@@ -34,7 +34,6 @@ export default ({ data }) => {
                     return <ArticleRelative node={location.pathname} />
                 }}
             </Location>
-
         </Layout>
     )
 }
