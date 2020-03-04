@@ -450,7 +450,7 @@ class Sidebar extends React.Component {
                 <Expend onClick={() =>
                     allToggled()
                 } >
-                    <img src={allToggledIcon} />展开全部
+                    <img src={allToggledIcon} /> {this.state.allToggled ? '收起全部' : '展开全部'}
                 </Expend>
             </Container >
         )
