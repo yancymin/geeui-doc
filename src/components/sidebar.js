@@ -10,11 +10,12 @@ import allToggledIcon from '../assets/all-toggled.svg';
 import { router } from './routerData.js'
 
 const Container = styled.div`
+    z-index: 999;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    max-width: 244px;
+    max-width: 240px;
     height: 100vh;
     display: inline-flex;  
     flex-direction: column;
@@ -57,7 +58,7 @@ const Logo = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 244px;
+    max-width: 240px;
     height: 100px;
     padding: 36px 24px;
     box-shadow: 0 1px 0px var(--gray5);
@@ -182,7 +183,7 @@ const List = styled.div`
 
 const Title = styled.h4`
     display: block; 
-    width: 244px;
+    width: 240px;
     min-height: 44px;
     display: flex;
     justify-content: space-between;
@@ -219,7 +220,7 @@ const Expend = styled.button`
         left: 0;
         display: block; 
         /* width: 240px; */
-        width: 244px;
+        width: 240px;
         height: 44px;
         display: flex;
         justify-content:flex-start;
@@ -269,6 +270,25 @@ class Sidebar extends React.Component {
         input.addEventListener('click', () => {
             this.setState({ isDark: !this.state.isDark });
         });
+
+        /********catalog*********/
+
+        let catalog = document.querySelector('#catalog');
+        let articleHeading = document.querySelector('#articleHeading');
+        const headerOffset = articleHeading.offsetTop + articleHeading.offsetHeight;
+        catalog.style.top = headerOffset + 70 + 'px'
+
+        window.addEventListener('scroll', (e) => {
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            if (scrollTop > headerOffset) {
+                catalog.style.transition = 'all 0.25s ease';
+                catalog.style.top = '120px'
+            } else {
+                catalog.style.transition = 'none';
+                catalog.style.top = ((headerOffset + 70) - scrollTop) + 'px'
+            }
+        })
+
 
         // const h4a = document.querySelector('#sidebar').querySelectorAll('h4');
         // h4a[0].parentNode.querySelectorAll('a').forEach(item => {

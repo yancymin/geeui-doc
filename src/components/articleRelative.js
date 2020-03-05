@@ -7,6 +7,7 @@ import { router2 } from './routerData.js'
 
 const ArticleRelative = styled.div`
     width: 100%;
+    max-width: 700px;
     display: flex;
     justify-content: space-between;
     margin: 48px 0 80px 0;

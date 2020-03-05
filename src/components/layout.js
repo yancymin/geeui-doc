@@ -17,19 +17,16 @@ const Article = styled.article`
     width: calc( 100vw - 240px );
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 100px;
-    margin-left: 245px;
+    margin-left: 240px;
 `
 const ArticleWrap = styled.div`
-    position: relative;
+    /* position: relative; */
     width: 100%;
-    max-width: 780px;
-    padding: 0 40px;
+    padding: 0 80px 0 80px;
     display: flex;
     /* justify-content: center;
      */
-     align-items: center;
+     /* align-items: center; */
     flex-direction: column;
 
     a {

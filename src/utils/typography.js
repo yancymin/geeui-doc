@@ -13,8 +13,8 @@ const typography = new Typography({
         },
         h1: {
             fontWeight: '400',
-            fontSize: '48px',
-            lineHeight: '48px',
+            fontSize: '56px',
+            lineHeight: '56px',
             color: `var(--black1)`,
             fontStyle: 'normal',
         },
@@ -56,6 +56,7 @@ const typography = new Typography({
             marginBottom: '12px',
         },
         hr: {
+            display: 'none',
             backgroundColor: `var(--gray6)`,
             margin: '32px 0 48px 0'
         },

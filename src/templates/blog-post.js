@@ -8,11 +8,32 @@ import { Location } from '@reach/router'
 
 const Content = styled.div`
     width: 100%;
+    max-width: 700px;
+
+    hr {
+        &:nth-of-type(1) {
+            & + h2 {
+                margin-top: 0 !important;
+            }
+        }
+    }
 `
-const Heading1 = styled.h1`
-        width: 100%;
+const Heading1 = styled.div`
+        width: calc(100vw - 240px);
+        z-index: 0;
+        position: relative;
+        top: 0;
+        left: -80px;
+        padding: 100px 80px 64px 80px;
         text-align: left;
         margin: 0;
+        border-bottom: 1px solid var(--gray5);
+        margin-bottom:  64px;
+
+        p {
+            max-width: 700px;
+            margin-bottom: 0;
+        }
 `
 
 export default ({ data }) => {
@@ -27,7 +48,7 @@ export default ({ data }) => {
     return (
         <Layout>
             <Catalog pageName={post.frontmatter.title} />
-            <Heading1>{post.frontmatter.title}</Heading1>
+            <Heading1 id="articleHeading"><h1>{post.frontmatter.title}</h1><p>{post.frontmatter.des}</p></Heading1>
             <Content dangerouslySetInnerHTML={{ __html: post.html }} />
             <Location>
                 {({ location }) => {
@@ -63,6 +84,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        des
       }
     }
   }

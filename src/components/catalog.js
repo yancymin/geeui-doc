@@ -6,11 +6,12 @@ import CatalogIcon from "../assets/catalog.svg";
 
 const Catalog = styled.div`
     position: fixed;
-    top: 168px;
+    /* top: 340px; */
+    /* transition: all 0.2s ease; */
 
     &>div {
         position: absolute;
-        margin-left: 410px;
+        margin-left: 760px;
     }
 
     span {
@@ -37,19 +38,19 @@ const CatalogWrap = styled.div`
     max-width: 200px;
 
     div {
-        height: 32px;
+        height: 28px;
         white-space: nowrap;
     }
 
     a {
         color: var(--black2);
         font-weight: 200;
-        font-size: 14px;
-        line-height: 14px;
+        font-size: 13px;
+        line-height: 13px;
         white-space: nowrap;
 
         &:hover {
-            text-decoration: underline;
+            text-decoration: none !important;
             color: var(--blue1);
         }
 
@@ -58,6 +59,7 @@ const CatalogWrap = styled.div`
         }
     }
 `
+
 
 export default props => {
     const data = useStaticQuery(graphql`
@@ -89,7 +91,7 @@ export default props => {
     })
 
     return (
-        <Catalog>
+        <Catalog id="catalog">
             <div>
                 <span>
                     目录
@@ -97,13 +99,13 @@ export default props => {
                 <CatalogWrap>
                     {headingValue.map((heading, index) => (
                         <div key={index}>
-                            <a href={'#' + heading.value.replace(decodeURIComponent('%20'),'-')}>
+                            <a href={'#' + heading.value.replace(decodeURIComponent('%20'), '-')}>
                                 {(heading.depth === 2) ? heading.value : ''}
                             </a>
-                            <a href={'#' + heading.value.replace(decodeURIComponent('%20'),'-')}>
+                            <a href={'#' + heading.value.replace(decodeURIComponent('%20'), '-')}>
                                 {(heading.depth === 3) ? heading.value : ''}
                             </a>
-                            <a href={'#' + heading.value.replace(decodeURIComponent('%20'),'-')}>
+                            <a href={'#' + heading.value.replace(decodeURIComponent('%20'), '-')}>
                                 {(heading.depth === 4) ? heading.value : ''}
                             </a>
                         </div>

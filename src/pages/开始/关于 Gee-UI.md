@@ -1,6 +1,7 @@
 ---
 title: "关于 Gee-UI"
 date: "2020-02-14"
+des: "Gee-UI 是极验（Geetest）内部的设计系统，包含可复用的 Web UI 组件、视觉样式和设计准则。"
 ---
 
 ---
