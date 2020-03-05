@@ -5,6 +5,7 @@ import { color, fontColor, ease } from '../styles/globalStyle';
 import CatalogIcon from "../assets/catalog.svg";
 
 const Catalog = styled.div`
+    opacity: 0;
     position: fixed;
     /* top: 340px; */
     /* transition: all 0.2s ease; */

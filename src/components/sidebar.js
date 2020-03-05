@@ -279,7 +279,8 @@ class Sidebar extends React.Component {
             let catalog = document.querySelector('#catalog');
             let articleHeading = document.querySelector('#articleHeading');
             const headerOffset = articleHeading.offsetTop + articleHeading.offsetHeight;
-            catalog.style.top = headerOffset + 70 + 'px'
+            catalog.style.top = headerOffset + 70 + 'px';
+            catalog.style.opacity = '1';
 
             window.addEventListener('scroll', (e) => {
                 var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
