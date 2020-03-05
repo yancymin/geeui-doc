@@ -281,7 +281,7 @@ class Sidebar extends React.Component {
         window.addEventListener('scroll', (e) => {
             var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             if (scrollTop > headerOffset) {
-                catalog.style.transition = 'all 0.25s ease';
+                catalog.style.transition = 'all 0.2s ease';
                 catalog.style.top = '120px'
             } else {
                 catalog.style.transition = 'none';
