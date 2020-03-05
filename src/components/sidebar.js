@@ -273,21 +273,26 @@ class Sidebar extends React.Component {
 
         /********catalog*********/
 
-        let catalog = document.querySelector('#catalog');
-        let articleHeading = document.querySelector('#articleHeading');
-        const headerOffset = articleHeading.offsetTop + articleHeading.offsetHeight;
-        catalog.style.top = headerOffset + 70 + 'px'
+        if (window.location.pathname == '/') {
+            return null
+        } else {
+            let catalog = document.querySelector('#catalog');
+            let articleHeading = document.querySelector('#articleHeading');
+            const headerOffset = articleHeading.offsetTop + articleHeading.offsetHeight;
+            catalog.style.top = headerOffset + 70 + 'px'
 
-        window.addEventListener('scroll', (e) => {
-            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-            if (scrollTop > headerOffset) {
-                catalog.style.transition = 'all 0.2s ease';
-                catalog.style.top = '120px'
-            } else {
-                catalog.style.transition = 'none';
-                catalog.style.top = ((headerOffset + 70) - scrollTop) + 'px'
-            }
-        })
+            window.addEventListener('scroll', (e) => {
+                var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                if (scrollTop > headerOffset) {
+                    catalog.style.transition = 'all 0.2s ease';
+                    catalog.style.top = '120px'
+                } else {
+                    catalog.style.transition = 'none';
+                    catalog.style.top = ((headerOffset + 70) - scrollTop) + 'px'
+                }
+            })
+        }
+
 
 
         // const h4a = document.querySelector('#sidebar').querySelectorAll('h4');
