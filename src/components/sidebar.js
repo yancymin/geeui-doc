@@ -121,6 +121,7 @@ const List = styled.div`
     overflow: hidden;
     padding-bottom: 8px;
     margin-top: -1px;
+    transition: all 0.2s ease;
 
     &:last-child{
         border-color: transparent;
