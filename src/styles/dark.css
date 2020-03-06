@@ -30,6 +30,7 @@ body.dark-mode {
   --gray4: #7888a6; /*icon fill*/
   --gray5: #484e58; /*sidebar border*/
   --gray6: #484e58; /*article line*/
+  --gray7: rgba(216, 221, 230, 0.06); /*sidebar active bg*/
   --blue1: #5286ff;
   --blue2: hsla(222, 100%, 69%, 0.5);
   --black1: #d0d2d7;
@@ -46,6 +47,7 @@ body.dark-mode {
   --gray4: #7888a6; /*icon fill*/
   --gray5: rgba(216, 221, 230, 0.6); /*sidebar border*/
   --gray6: #d8dde6; /*article line*/
+  --gray7: #f3f4f7; /*sidebar active bg*/
   --blue1: #3973ff;
   --blue2: hsla(222, 100%, 61%, 0.3);
   --black1: #292f3a;

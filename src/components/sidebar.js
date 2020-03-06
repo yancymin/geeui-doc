@@ -105,15 +105,22 @@ const Nav = styled.div`
              transform: rotate(0deg);
          }
      }
+
+     .activeBg {
+         background-color: var(--gray7);
+         border-bottom-color: var(--gray5)
+     }
 `
 
 const List = styled.div`
     display: flex;
     flex-direction: column;
     border-top: 1px solid var(--gray5);
+    border-bottom: 1px solid transparent;
     transition: all 1s ease;
     overflow: hidden;
     padding-bottom: 8px;
+    margin-top: -1px;
 
     &:last-child{
         border-color: transparent;
@@ -294,24 +301,26 @@ class Sidebar extends React.Component {
             })
         }
 
+        /********sidebar active*********/
 
 
-        // const h4a = document.querySelector('#sidebar').querySelectorAll('h4');
-        // h4a[0].parentNode.querySelectorAll('a').forEach(item => {
-        //     item.addEventListener('click', () => {
-        //         if (localStorage.getItem('isToggled1') === '1') {
-        //             return this.setState({
-        //                 isToggled1: true
-        //             })
-        //         } else {
-        //             return this.setState({
-        //                 isToggled1: false
-        //             })
-        //         }
-        //     })
-        // })
+        const h4a = document.querySelector('#sidebar').querySelectorAll('h4');
+
+        h4a.forEach(item => {
+            item.addEventListener('click', () => {
+                item.parentNode.classList.add('activeBg')
+            })
+
+            item.parentNode.querySelectorAll('a').forEach(item => {
+                if (item.className === 'active') {
+                    item.parentNode.classList.remove('close')
+                    item.parentNode.classList.add('activeBg')
+                }
+            })
+        })
 
     }
+
 
     render() {
 
@@ -409,7 +418,7 @@ class Sidebar extends React.Component {
                 </Logo>
 
                 < Nav id='sidebar'>
-                    <List className={(this.state.isToggled1) ? 'close' : null}>
+                    <List className={(this.state.isToggled1) ? 'close' : '' }>
                         <Title onClick={() => handleClose1()}>
                             <p>
                                 开始
@@ -417,11 +426,11 @@ class Sidebar extends React.Component {
                             <i>
                             </i>
                         </Title>
-                        {router.开始.map((item, index) => {
+                    {router.开始.map((item, index) => {
                             return (<Link key={index} activeClassName="active" to={'/' + '开始' + '/' + item} >{item}</Link>)
                         })}
                     </List>
-                    <List className={(this.state.isToggled2) ? 'close' : null}>
+                <List className={(this.state.isToggled2) ? 'close' : null}>
                         <Title onClick={() => handleClose2()}>
                             <p>
                                 基本
