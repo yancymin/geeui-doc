@@ -162,6 +162,12 @@ const List = styled.div`
         }
     }
 
+    #help {
+        font-size: 14px;
+        line-height: 14px;
+        min-height: 44px;
+    }
+
     a {
         position: relative;
         display: block; 
@@ -179,12 +185,6 @@ const List = styled.div`
         color: var(--black2);
         text-decoration: none;
         transition: all 0.25s ease;
-
-        &:last-child {
-            font-size: 14px;
-            line-height: 14px;
-            min-height: 44px;
-        }
 
         &:hover {
             background-color: var(--gray2);
@@ -487,7 +487,7 @@ class Sidebar extends React.Component {
                         })}
                     </List>
                     <List >
-                        <Link activeClassName="active" to={'/帮助'} >帮助</Link>
+                        <Link activeClassName="active" to={'/帮助'} id='help'>帮助</Link>
                     </List>
                 </Nav>
                 <Expend onClick={() =>

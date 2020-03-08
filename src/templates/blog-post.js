@@ -38,23 +38,23 @@ const Heading1 = styled.div`
 
 const Tags = styled.div`
     display: flex;
-    margin-top: 28px;
+    margin-top: 32px;
     max-width: 700px;
     flex-wrap: wrap;
 `
 const Tag = styled.a`
     display: flex;
     align-items: center;
-    height: 30px;
+    /* height: 30px; */
     font-size: 14px;
-    line-height: 13px;
-    padding: 0 12px;
+    /* line-height: 13px; */
+    padding: 3px 12px;
     background-color: var(--gray7);
     color: var(--black2);  
     margin-right: 12px;
-    border-radius: 24px;
+    border-radius: 29px;
     transition: all 0.25s ease;
-    margin-top: 20px;
+    margin-top: 16px;
    
    &:hover {
     text-decoration: none !important;
