@@ -137,7 +137,7 @@ const List = styled.div`
 
 
     .active {
-        color: var(--blue1);
+        color: var(--blue1) !important;
         font-weight: 400;
 
         p {
@@ -167,18 +167,24 @@ const List = styled.div`
         display: block; 
         /* width: 240px; */
         width: 100%;
-        min-height: 44px;
+        min-height: 36px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 0 12px 0 40px;
         font-weight: 200;
-        font-size: 14px;
-        line-height: 14px;
+        font-size: 13px;
+        line-height: 13px;
         margin: 0;
         color: var(--black2);
         text-decoration: none;
         transition: all 0.25s ease;
+
+        &:last-child {
+            font-size: 14px;
+            line-height: 14px;
+            min-height: 44px;
+        }
 
         &:hover {
             background-color: var(--gray2);
@@ -288,14 +294,15 @@ class Sidebar extends React.Component {
             let articleHeading = document.querySelector('#articleHeading');
             const headerOffset = articleHeading.offsetTop + articleHeading.offsetHeight;
             catalog.style.top = headerOffset + 70 + 'px';
-            catalog.style.opacity = '1';
 
             window.addEventListener('scroll', (e) => {
                 var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
                 if (scrollTop > headerOffset) {
-                    catalog.style.transition = 'all 0.2s ease';
-                    catalog.style.top = '120px'
+                    catalog.style.transition = 'all 0.4s ease';
+                    // catalog.style.top = '120px';
+                    catalog.style.opacity = '1';
                 } else {
+                    catalog.style.opacity = '0';
                     catalog.style.transition = 'none';
                     catalog.style.top = ((headerOffset + 70) - scrollTop) + 'px'
                 }
@@ -419,7 +426,7 @@ class Sidebar extends React.Component {
                 </Logo>
 
                 < Nav id='sidebar'>
-                    <List className={(this.state.isToggled1) ? 'close' : '' }>
+                    <List className={(this.state.isToggled1) ? 'close' : ''}>
                         <Title onClick={() => handleClose1()}>
                             <p>
                                 开始
@@ -427,11 +434,11 @@ class Sidebar extends React.Component {
                             <i>
                             </i>
                         </Title>
-                    {router.开始.map((item, index) => {
-                            return (<Link key={index} activeClassName="active" to={'/' + '开始' + '/' + item} >{item}</Link>)
+                        {router.开始.map((item, index) => {
+                            return (<Link key={index} activeClassName="active" to={'/开始/' + item} >{item}</Link>)
                         })}
                     </List>
-                <List className={(this.state.isToggled2) ? 'close' : null}>
+                    <List className={(this.state.isToggled2) ? 'close' : null}>
                         <Title onClick={() => handleClose2()}>
                             <p>
                                 基本
@@ -440,7 +447,7 @@ class Sidebar extends React.Component {
                             </i>
                         </Title>
                         {router.基本.map((item, index) => {
-                            return (<Link key={index} activeClassName="active" to={'/' + '基本' + '/' + item} >{item}</Link>)
+                            return (<Link key={index} activeClassName="active" to={'/基本/' + item} >{item}</Link>)
                         })}
                     </List>
                     <List className={(this.state.isToggled3) ? 'close' : null}>
@@ -452,7 +459,7 @@ class Sidebar extends React.Component {
                             </i>
                         </Title>
                         {router.组件.map((item, index) => {
-                            return (<Link key={index} activeClassName="active" to={'/' + '组件' + '/' + item} >{item}</Link>)
+                            return (<Link key={index} activeClassName="active" to={'/组件/' + item} >{item}</Link>)
                         })}
                     </List>
                     <List className={(this.state.isToggled4) ? 'close' : null}>
@@ -464,7 +471,7 @@ class Sidebar extends React.Component {
                             </i>
                         </Title>
                         {router.模式.map((item, index) => {
-                            return (<Link key={index} activeClassName="active" to={'/' + '模式' + '/' + item} >{item}</Link>)
+                            return (<Link key={index} activeClassName="active" to={'/模式/' + item} >{item}</Link>)
                         })}
                     </List>
                     <List className={(this.state.isToggled5) ? 'close' : null}>
@@ -476,7 +483,7 @@ class Sidebar extends React.Component {
                             </i>
                         </Title>
                         {router.数据可视化.map((item, index) => {
-                            return (<Link key={index} activeClassName="active" to={'/' + '数据可视化' + '/' + item} >{item}</Link>)
+                            return (<Link key={index} activeClassName="active" to={'/数据可视化/' + item} >{item}</Link>)
                         })}
                     </List>
                     <List >

@@ -24,16 +24,43 @@ const Heading1 = styled.div`
         position: relative;
         top: 0;
         left: -80px;
-        padding: 100px 80px 64px 80px;
+        padding: 100px 80px 60px 80px;
         text-align: left;
         margin: 0;
         border-bottom: 1px solid var(--gray5);
         margin-bottom:  64px;
 
-        p {
+        p { 
             max-width: 700px;
             margin-bottom: 0;
         }
+`
+
+const Tags = styled.div`
+    display: flex;
+    margin-top: 28px;
+    max-width: 700px;
+    flex-wrap: wrap;
+`
+const Tag = styled.a`
+    display: flex;
+    align-items: center;
+    height: 30px;
+    font-size: 14px;
+    line-height: 13px;
+    padding: 0 12px;
+    background-color: var(--gray7);
+    color: var(--black2);  
+    margin-right: 12px;
+    border-radius: 24px;
+    transition: all 0.25s ease;
+    margin-top: 20px;
+   
+   &:hover {
+    text-decoration: none !important;
+    color: var(--gray1) !important;  
+    background-color: var(--black1);
+   }
 `
 
 export default ({ data }) => {
@@ -43,12 +70,33 @@ export default ({ data }) => {
         nodeItem.node.fields.slug
     ))
 
+    const headingValue = []
+    data.allMarkdownRemark.edges.map(({ node }) => {
+        if (post.frontmatter.title === node.frontmatter.title) {
+            node.headings.map((headingNode) => {
+                headingValue.push(headingNode)
+                return headingValue
+            })
+        }
+    })
+
 
 
     return (
         <Layout>
             <Catalog pageName={post.frontmatter.title} />
-            <Heading1 id="articleHeading"><h1>{post.frontmatter.title}</h1><p>{post.frontmatter.des}</p></Heading1>
+            <Heading1 id="articleHeading">
+                <h1>{post.frontmatter.title}</h1>
+                <p>{post.frontmatter.des}</p>
+                <Tags >
+                    {headingValue.map((heading, index) => (
+                        (heading.depth === 2) ?
+                            <Tag key={index} href={'#' + heading.value.replace(decodeURIComponent('%20'), '-')}>
+                                {heading.value}
+                            </Tag> : null
+                    ))}
+                </Tags>
+            </Heading1>
             <Content dangerouslySetInnerHTML={{ __html: post.html }} />
             <Location>
                 {({ location }) => {
@@ -74,11 +122,19 @@ export const query = graphql`
                 }
             }
             node {
+                frontmatter {
+                    title
+                  }
                 fields {
                     slug
                 }
+                headings {
+                    value
+                    depth
+                  }
             }
         }
+
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html

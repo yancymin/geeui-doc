@@ -22,6 +22,7 @@ const Icon = styled.a`
 
     
     &:hover {
+        transform: scale(1.1);
         border-color: var(--gray6);
         span {
             visibility: visible;
@@ -78,6 +79,8 @@ const IconWrap = styled.div`
 
         &:hover {
         border-color: var(--gray6);
+        transform: scale(1.1);
+
             &::after {
                 visibility: visible;
                 transform: perspective(80px) rotateX(0) scaleY(1);

@@ -7,8 +7,6 @@ import CatalogIcon from "../assets/catalog.svg";
 const Catalog = styled.div`
     opacity: 0;
     position: fixed;
-    /* top: 340px; */
-    /* transition: all 0.2s ease; */
 
     &>div {
         position: absolute;
@@ -37,10 +35,21 @@ const Catalog = styled.div`
 `
 const CatalogWrap = styled.div`
     max-width: 200px;
+    display: flex;
+    flex-direction:column;
+
+    &>div{
+            padding-left: 8px;
+        }
+
 
     div {
+        display: flex;
+        align-items: center;
+        position: relative;
         height: 28px;
         white-space: nowrap;
+        transition: all 0.25s ease;
     }
 
     a {
@@ -49,15 +58,15 @@ const CatalogWrap = styled.div`
         font-size: 13px;
         line-height: 13px;
         white-space: nowrap;
+        margin: 7px 0;
+        
 
         &:hover {
             text-decoration: none !important;
             color: var(--blue1);
         }
 
-        &:last-child, &:nth-of-type(2) {
-            padding-left: 8px;
-        }
+
     }
 `
 
@@ -99,17 +108,14 @@ export default props => {
              </span>
                 <CatalogWrap>
                     {headingValue.map((heading, index) => (
-                        <div key={index}>
-                            <a href={'#' + heading.value.replace(decodeURIComponent('%20'), '-')}>
-                                {(heading.depth === 2) ? heading.value : ''}
-                            </a>
-                            <a href={'#' + heading.value.replace(decodeURIComponent('%20'), '-')}>
-                                {(heading.depth === 3) ? heading.value : ''}
-                            </a>
-                            <a href={'#' + heading.value.replace(decodeURIComponent('%20'), '-')}>
-                                {(heading.depth === 4) ? heading.value : ''}
-                            </a>
-                        </div>
+                        (heading.depth === 2) ?
+                            <a key={index} href={'#' + heading.value.replace(decodeURIComponent('%20'), '-')}>
+                                {heading.value}
+                            </a> : ((heading.depth === 3) ? <div><a key={index + 1} href={'#' + heading.value.replace(decodeURIComponent('%20'), '-')}>
+                                {heading.value}
+                            </a> </div> : (heading.depth === 4) ? <div><a key={index + 2} href={'#' + heading.value.replace(decodeURIComponent('%20'), '-')}>
+                                {heading.value}
+                            </a> </div> : null)
                     ))}
                 </CatalogWrap>
             </div>
