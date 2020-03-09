@@ -1,0 +1,60 @@
+<svg width="202" height="73" viewBox="0 0 202 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="202" height="73">
+<path d="M201 72.0882H201.5V71.5882V5C201.5 2.51472 199.485 0.5 197 0.5H5C2.51472 0.5 0.5 2.51472 0.5 5V71.5882V72.0882H1H201Z" fill="white" stroke="#D8DDE6"/>
+</mask>
+<g mask="url(#mask0)">
+<path d="M201 77.5H201.5V77V-5C201.5 -7.48528 199.485 -9.5 197 -9.5H-5C-7.48528 -9.5 -9.5 -7.48528 -9.5 -5V77V77.5H-9H201Z" fill="#292F3A" stroke="#D8DDE6"/>
+<circle opacity="0.6" cx="172.75" cy="13" r="3" fill="#546373"/>
+<circle opacity="0.6" cx="185.5" cy="25" r="3" fill="#546373"/>
+<circle opacity="0.6" cx="160" cy="49" r="3" fill="#546373"/>
+<circle opacity="0.6" cx="198.25" cy="61" r="3" fill="#546373"/>
+<circle opacity="0.6" cx="160" cy="25" r="3" fill="#546373"/>
+<circle cx="147" cy="1" r="3" fill="#546373"/>
+<circle cx="134" cy="1" r="3" fill="#546373"/>
+<circle cx="159.75" cy="1" r="3" fill="#546373"/>
+<circle cx="172.5" cy="1" r="3" fill="#546373"/>
+<circle cx="185.25" cy="1" r="3" fill="#546373"/>
+<circle cx="198" cy="1" r="3" fill="#546373"/>
+<circle cx="147" cy="13" r="3" fill="#546373"/>
+<circle cx="134" cy="13" r="3" fill="#546373"/>
+<circle cx="159.75" cy="13" r="3" fill="#546373"/>
+<circle cx="185.25" cy="13" r="3" fill="#546373"/>
+<circle cx="198" cy="13" r="3" fill="#546373"/>
+<circle cx="147" cy="25" r="3" fill="#546373"/>
+<circle cx="134" cy="25" r="3" fill="#546373"/>
+<circle cx="172.5" cy="25" r="3" fill="#546373"/>
+<circle cx="198" cy="25" r="3" fill="#546373"/>
+<circle cx="147" cy="37" r="3" fill="#546373"/>
+<circle cx="134" cy="37" r="3" fill="#546373"/>
+<circle cx="159.75" cy="37" r="3" fill="#546373"/>
+<circle cx="172.5" cy="37" r="3" fill="#546373"/>
+<circle cx="185.25" cy="37" r="3" fill="#546373"/>
+<circle cx="198" cy="37" r="3" fill="#546373"/>
+<circle cx="147" cy="49" r="3" fill="#546373"/>
+<circle cx="134" cy="49" r="3" fill="#546373"/>
+<circle cx="172.5" cy="49" r="3" fill="#546373"/>
+<circle cx="185.25" cy="49" r="3" fill="#546373"/>
+<circle cx="198" cy="49" r="3" fill="#546373"/>
+<circle cx="147" cy="61" r="3" fill="#546373"/>
+<circle cx="134" cy="61" r="3" fill="#546373"/>
+<circle cx="159.75" cy="61" r="3" fill="#546373"/>
+<circle cx="172.5" cy="61" r="3" fill="#546373"/>
+<circle cx="185.25" cy="61" r="3" fill="#546373"/>
+<circle cx="147" cy="73" r="3" fill="#546373"/>
+<circle cx="134" cy="73" r="3" fill="#546373"/>
+<circle cx="159.75" cy="73" r="3" fill="#546373"/>
+<circle cx="172.5" cy="73" r="3" fill="#546373"/>
+<circle cx="185.25" cy="73" r="3" fill="#546373"/>
+<circle cx="198" cy="73" r="3" fill="#546373"/>
+<path d="M20.3999 -88V160" stroke="#546373" stroke-width="2"/>
+<path d="M45.2 -88V160" stroke="#546373" stroke-width="2" stroke-dasharray="4 4"/>
+<path d="M70 -88V160" stroke="#546373" stroke-width="2"/>
+<path d="M-178 0.350014L70 0.350003" stroke="#546373" stroke-width="2"/>
+<path d="M-178 25.15L70 25.15" stroke="#546373" stroke-width="2" stroke-dasharray="4 4"/>
+<path d="M-178 49.95L70 49.95" stroke="#546373" stroke-width="2"/>
+<path d="M100.242 -8.55671L100.242 8.60461L125 20.6046V49.1046L106.511 61.703L100.242 63.5177L100.242 -8.55671Z" fill="#546373"/>
+<path d="M131 36.1046C131 52.6732 117.569 66.1046 101 66.1046C84.4315 66.1046 71 52.6732 71 36.1046C71 19.5361 84.4315 6.10461 101 6.10461C117.569 6.10461 131 19.5361 131 36.1046ZM77.7899 36.1046C77.7899 48.9232 88.1814 59.3147 101 59.3147C113.819 59.3147 124.21 48.9232 124.21 36.1046C124.21 23.286 113.819 12.8945 101 12.8945C88.1814 12.8945 77.7899 23.286 77.7899 36.1046Z" fill="#58DAC1"/>
+<circle cx="101" cy="36.2941" r="8.91679" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M100.456 27.3936C95.7849 27.6746 92.0833 31.5521 92.0833 36.2941C92.0833 41.0361 95.7849 44.9136 100.456 45.1946V27.3936Z" fill="#546373"/>
+</g>
+</svg>

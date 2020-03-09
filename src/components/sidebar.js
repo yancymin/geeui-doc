@@ -169,6 +169,7 @@ const List = styled.div`
     }
 
     a {
+        cursor: pointer;
         position: relative;
         display: block; 
         /* width: 240px; */
@@ -196,6 +197,7 @@ const List = styled.div`
 `
 
 const Title = styled.h4`
+    cursor: pointer;
     display: block; 
     width: 240px;
     min-height: 44px;
@@ -217,6 +219,7 @@ const Title = styled.h4`
         color: var(--black1);
     }
     i {
+        cursor: pointer;
         display: block;
         width: 20px;
         height: 20px;

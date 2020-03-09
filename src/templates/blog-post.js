@@ -45,9 +45,7 @@ const Tags = styled.div`
 const Tag = styled.a`
     display: flex;
     align-items: center;
-    /* height: 30px; */
     font-size: 14px;
-    /* line-height: 13px; */
     padding: 3px 12px;
     background-color: var(--gray7);
     color: var(--black2);  

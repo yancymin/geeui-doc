@@ -49,7 +49,7 @@ des: "分步骤展示包含有关其功能的简短帮助文本。"
 
 ![step's-tooltips-4](./step's-tooltips-4.jpg)
 
-## 风格样式
+
 
 ## 颜色
 

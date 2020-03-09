@@ -53,20 +53,18 @@ const CatalogWrap = styled.div`
     }
 
     a {
+        position: relative;
         color: var(--black2);
         font-weight: 200;
         font-size: 13px;
         line-height: 13px;
         white-space: nowrap;
         margin: 7px 0;
-        
 
         &:hover {
             text-decoration: none !important;
             color: var(--blue1);
         }
-
-
     }
 `
 

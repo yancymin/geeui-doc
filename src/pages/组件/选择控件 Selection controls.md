@@ -67,7 +67,7 @@ des: "选择控件使用户可以完成涉及选择的任务，例如选择选�
 
 ![selection-controls-7](./selection-controls-7.jpg)
 
-## 风格样式
+
 
 ## 颜色
 
