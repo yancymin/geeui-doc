@@ -66,7 +66,7 @@ const Logo = styled.div`
 
 
     img,a {
-        height: 28px;
+        height: 32px;
     }
 `
 

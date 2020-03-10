@@ -16,8 +16,8 @@ export const SearchIcon = styled(Search)`
 
 const focus = css`
   border-color: var(--gray5);
-  background: white;
-  color: ${props => props.theme.darkBlue};
+  background: var(--bg);
+  color: var(--black1);
   cursor: text;
   width: 200px;
   + ${SearchIcon} {
@@ -38,17 +38,17 @@ const collapse = css`
   }
   ${props => props.focus && focus}
   margin-left: ${props => (props.focus ? `-11.6em` : `-1em`)};
-  padding-left: ${props => (props.focus ? `1.6em` : `1em`)};
+  padding-left: ${props => (props.focus ? `1em` : `1em`)};
   ::placeholder {
     color: ${props => props.theme.gray};
   }
 `
 
 const expand = css`
-  background: ${props => props.theme.veryLightGray};
+  background: var(--bg);
   width: 6em;
   margin-left: -1.6em;
-  padding-left: 1.6em;
+  padding-left: 0.6em;
   + ${SearchIcon} {
     margin: 0.3em;
   }
@@ -79,7 +79,7 @@ export const Form = styled.form`
 `
 
 export const HitsWrapper = styled.div`
-  box-shadow: 0px 2px 4px #CCD0D9;
+  box-shadow: 0px 2px 4px var(--gray5);
   border-radius: 3px;
   display: ${props => (props.show ? `grid` : `none`)};
   max-height: 80vh;
@@ -92,7 +92,8 @@ export const HitsWrapper = styled.div`
   width: 80vw;
   max-width: 30em;
   padding: 0.7em 1em 0.4em;
-  background: white;
+  background: var(--bg);
+  color: var(--black2);
   border-radius: ${props => props.theme.smallBorderRadius};
   > * + * {
     padding-top: 1em !important;
@@ -119,7 +120,7 @@ export const HitsWrapper = styled.div`
     justify-content: space-between;
     margin-bottom: 0.3em;
     h3 {
-      color: white;
+      color: var(--black1);
       background: ${props => props.theme.gray};
       padding: 0.1em 0.4em;
       border-radius: ${props => props.theme.smallBorderRadius};
