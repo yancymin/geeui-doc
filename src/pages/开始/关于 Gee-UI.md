@@ -36,6 +36,4 @@ Gee-UI 是极验（Geetest）内部的设计系统，包含可复用的 Web UI �
 
 ## 维护团队
 
-极验（Geetest）设计团队和前端团队致力于构建和维护该系统。核心团队包括 Yancy Min、 Yorkun、 Charlie Liu、 Hwoma 。
-
-## 更新日志
+极验（Geetest）设计团队和前端团队致力于构建和维护该系统。核心团队包括 [Yancy Min](https://yancymin.design)、 [Yorkun](https://yorkun.com)、 [Charlie Liu](https://www.liuchangyi.com/)、 Hwoma 。

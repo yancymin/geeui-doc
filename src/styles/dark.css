@@ -98,3 +98,19 @@ th,
 td {
   padding: 14px 6px;
 }
+
+
+.sideBarOpen {
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
+  transform: translateX(0) !important;
+}
+
+.mobileHeaderDis {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+
+.menuActive {
+  transform: rotate(90deg);
+}

@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { Link, graphql, useStaticQuery, StaticQuery } from "gatsby"
-import { css } from "@emotion/core"
 import styled from 'styled-components';
 import { color, fontColor } from '../styles/globalStyle';
 import logoLight from '../assets/logo.svg';
@@ -25,6 +24,11 @@ const Container = styled.div`
     overflow-y: scroll;
     overflow-x: hidden;
     transition: all 0.2s ease;
+
+    @media screen and (max-width: 414px) {
+        transform: translateX(-101%);
+        overflow: unset;
+    }
 
     ::-webkit-scrollbar , ::-webkit-scrollbar-thumb{
         visibility: hidden;
@@ -254,6 +258,11 @@ const Expend = styled.button`
         border-color: transparent;
         border-top: 1px solid var(--gray5);
 
+
+        @media screen and (max-width: 414px) {
+            opacity: 0;
+        }
+
         img {
             margin-right: 4px;
         }
@@ -264,6 +273,7 @@ const Expend = styled.button`
             color: var(--black1);
         }
 `
+
 
 class Sidebar extends React.Component {
     constructor(props) {
@@ -416,7 +426,7 @@ class Sidebar extends React.Component {
 
 
         return (
-            <Container >
+            <Container id='sideBar'>
                 <Logo>
                     <Link to='/'>
                         <img alt='logo' src={this.state.isDark ? logoDark : logoLight}>

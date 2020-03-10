@@ -1,6 +1,7 @@
 import React from "react"
 import Sidebar from "./sidebar"
 import Iconui from "./iconui"
+import MenuBtn from "./menuBtn"
 import SiteMetadata from "./site-metadata"
 import styled from 'styled-components';
 import { color, fontColor, ease } from '../styles/globalStyle';
@@ -18,6 +19,11 @@ const Article = styled.article`
     display: flex;
     flex-direction: column;
     margin-left: 240px;
+
+    @media screen and (max-width: 414px) {
+        width: 100%;
+        margin-left: 0;
+    }
 `
 const ArticleWrap = styled.div`
     /* position: relative; */
@@ -35,6 +41,10 @@ const ArticleWrap = styled.div`
         text-decoration: underline;
         color: var(--blue1);
       }
+    }
+
+    @media screen and (max-width: 414px) {
+      padding: 0 24px;
     }
 `
 const Footer = styled.footer`
@@ -65,6 +75,7 @@ const adobeFont = `
 
 export default ({ children }) => (
   <Container>
+    <MenuBtn/>
     <Location>
       {({ location }) => {
         return <SiteMetadata title={location.pathname} adobeFont={adobeFont} />

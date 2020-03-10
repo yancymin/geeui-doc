@@ -34,6 +34,12 @@ const Heading1 = styled.div`
             max-width: 700px;
             margin-bottom: 0;
         }
+
+        @media screen and (max-width: 414px) {
+            width: 100%;
+            padding: 120px 0 60px 0;
+            left: 0;
+        }
 `
 
 const Tags = styled.div`

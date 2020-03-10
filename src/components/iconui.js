@@ -63,6 +63,12 @@ const IconWrap = styled.div`
     top: 24px;
     right: 40px;
     display: flex;
+    
+
+    @media screen and (max-width: 414px) {
+        opacity: 0;
+        visibility: hidden;
+    }
 
     .toggle-control {
         position: relative;

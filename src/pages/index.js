@@ -54,6 +54,20 @@ const Heading = styled.header`
   left: -80px;
   overflow: hidden;
 
+
+  @media screen and (max-width: 414px) {
+      width: 100vw;
+      left: -24px;
+      padding: 100px 24px 64px 24px;
+
+      img {
+        right: -40% !important;
+        bottom: -25%;
+        min-width: 600px;
+        top: unset !important;
+      }
+    }
+
   h1 {
     color: white;
   }
@@ -188,6 +202,17 @@ const CardWarp = styled.div`
     margin-right: 16px;
     transition: all 0.2s ease;
     overflow: hidden;
+
+    
+    @media screen and (max-width: 414px) {
+        width: 100%;
+        margin-right: 0;
+
+        img {
+          min-width: 101% !important;
+          left: -1px;
+        }
+    }
 
 
     img {
