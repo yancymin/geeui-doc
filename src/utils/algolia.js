@@ -34,7 +34,7 @@ const pageQuery = `{
 //   }`
 
 const flatten = arr =>
-    arr.map(({ node: { frontmatter, ...rest } }) => ({
+    arr.map(({ node: { frontmatter, fields, ...rest } }) => ({
         ...frontmatter,
         ...fields,
         ...rest,

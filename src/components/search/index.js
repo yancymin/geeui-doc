@@ -22,19 +22,18 @@ const Stats = connectStateResults(
 )
 
 
-const useClickOutside = (ref, handler, events) => {
-  if (!events) events = [`mousedown`, `touchstart`]
-  const detectClickOutside = event =>
-    !ref.current.contains(event.target) && handler()
-  useEffect(() => {
-    for (const event of events)
-      document.addEventListener(event, detectClickOutside)
-    return () => {
-      for (const event of events)
-        document.removeEventListener(event, detectClickOutside)
-    }
-  })
-}
+// const useClickOutside = (ref, handler, events) => {
+//   if (!events) events = [`mousedown`, `touchstart`]
+//   const detectClickOutside = event => !ref.current.contains(event.target) && handler()
+//   useEffect(() => {
+//     for (const event of events)
+//       document.addEventListener(event, detectClickOutside)
+//     return () => {
+//       for (const event of events)
+//         document.removeEventListener(event, detectClickOutside)
+//     }
+//   })
+// }
 
 export default function Search({ indices, collapse, hitsAsGrid }) {
   const ref = createRef()
@@ -44,7 +43,7 @@ export default function Search({ indices, collapse, hitsAsGrid }) {
     'VXP9ZWOE9U',
     '4164022d771d8206b6a0686e1a558089'
   )
-  useClickOutside(ref, () => setFocus(false))
+  // useClickOutside(ref, () => setFocus(false))
   return (
     <InstantSearch
       searchClient={searchClient}
