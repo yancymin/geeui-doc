@@ -55,6 +55,11 @@ const Footer = styled.footer`
   padding: 24px 40px;
   border-top: 1px solid var(--gray5);
 
+  @media screen and (max-width: 414px) {
+    padding: 24px;
+
+        }
+
   span {
     font-weight: normal;
     font-size: 12px;
@@ -75,7 +80,7 @@ const adobeFont = `
 
 export default ({ children }) => (
   <Container>
-    <MenuBtn/>
+    <MenuBtn />
     <Location>
       {({ location }) => {
         return <SiteMetadata title={location.pathname} adobeFont={adobeFont} />
