@@ -1,7 +1,7 @@
 import React from "react"
 import Sidebar from "./sidebar"
 import Iconui from "./iconui"
-import menuSwitch from "./menuSwitch"
+import MenuSwitch from "./menuSwitch"
 import SiteMetadata from "./site-metadata"
 import styled from 'styled-components';
 import { color, fontColor, ease } from '../styles/globalStyle';
@@ -80,7 +80,7 @@ const adobeFont = `
 
 export default ({ children }) => (
   <Container>
-    <menuSwitch />
+    <MenuSwitch />
     <Location>
       {({ location }) => {
         return <SiteMetadata title={location.pathname} adobeFont={adobeFont} />
