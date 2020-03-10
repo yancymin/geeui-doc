@@ -21,6 +21,7 @@ const Stats = connectStateResults(
     res && res.nbHits > 0 && `${res.nbHits} result${res.nbHits > 1 ? `s` : ``}`
 )
 
+
 const useClickOutside = (ref, handler, events) => {
   if (!events) events = [`mousedown`, `touchstart`]
   const detectClickOutside = event =>
