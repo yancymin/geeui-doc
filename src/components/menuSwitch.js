@@ -91,7 +91,7 @@ export default () => {
         <div>
             <MobileHeader id='mobileHeader'>
                 <Link to='/'>
-                    <img src={localStorage.getItem('darkMode') ? logoLight : logoDark} alt='logo' />
+                    <img src={logoLight} alt='logo' />
                 </Link>
                 <Tag>
                     V 1.0
