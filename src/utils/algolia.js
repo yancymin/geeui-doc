@@ -36,6 +36,7 @@ const pageQuery = `{
 const flatten = arr =>
     arr.map(({ node: { frontmatter, ...rest } }) => ({
         ...frontmatter,
+        ...fields,
         ...rest,
     }))
 const settings = { attributesToSnippet: [`excerpt:20`] }
