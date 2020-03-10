@@ -74,16 +74,16 @@ export default () => {
         e.preventDefault();
         const sideBar = document.querySelector('#sideBar');
         const mobileHeader = document.querySelector('#mobileHeader');
-        const menuBtn = document.querySelector('#menuBtn');
+        const menuButton = document.querySelector('#menuBtn');
         if (isToggled === true) {
             setToggled(!isToggled)
             sideBar.classList.add('sideBarOpen')
             mobileHeader.classList.add('mobileHeaderDis')
-            menuBtn.classList.add('menuActive')
+            menuButton.classList.add('menuActive')
         } else {
             sideBar.classList.remove('sideBarOpen')
             mobileHeader.classList.remove('mobileHeaderDis')
-            menuBtn.classList.remove('menuActive')
+            menuButton.classList.remove('menuActive')
         }
     }
 
