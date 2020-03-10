@@ -117,6 +117,7 @@ module.exports = {
         trackingId: "UA-98374033-12",
         head: true,
       },
+    },
   ],
 }
 
