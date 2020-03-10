@@ -9,8 +9,7 @@ import useDarkMode from 'use-dark-mode';
 import Search from "../components/search/index"
 
 const searchIndices = [
-    { name: `Pages`, title: `Pages`, hitComp: `PageHit` },
-    { name: `Posts`, title: `Blog Posts`, hitComp: `PostHit` },
+    { name: `Pages`, title: `Pages`, hitComp: `PageHit` }
 ]
 
 const Icon = styled.a`

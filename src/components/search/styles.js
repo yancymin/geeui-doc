@@ -58,7 +58,7 @@ export const Input = styled.input`
   transition: ${props => props.theme.shortTrans};
   border-radius: ${props => props.theme.smallBorderRadius};
   /* {highlight-next-line}; */
-  ${props => (props.collapse ? collapse : expand)};
+  ${props => (props.collapse ? collapse : expand)}
 `
 
 export const Form = styled.form`

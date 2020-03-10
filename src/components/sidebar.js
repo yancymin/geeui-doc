@@ -283,8 +283,8 @@ class Sidebar extends React.Component {
 
     componentDidMount() {
         (localStorage.getItem('darkMode') === 'true') ? this.setState({ isDark: true }) : this.setState({ isDark: false })
-        const input = document.getElementsByTagName('input')[0];
-        input.addEventListener('click', () => {
+        const darkBtn = document.querySelector('#dmcheck');
+        darkBtn.addEventListener('click', () => {
             this.setState({ isDark: !this.state.isDark });
         });
 
@@ -313,7 +313,6 @@ class Sidebar extends React.Component {
         }
 
         /********sidebar active*********/
-
 
         const h4a = document.querySelector('#sidebar').querySelectorAll('h4');
 
