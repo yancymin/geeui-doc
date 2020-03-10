@@ -86,6 +86,7 @@ export default () => {
             menuBtn.classList.remove('menuActive')
         }
     }
+    
     return (
         <div>
             <MobileHeader id='mobileHeader'>
