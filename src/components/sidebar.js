@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react'
 import { Link, graphql, useStaticQuery, StaticQuery } from "gatsby"
 import styled from 'styled-components';
-import { color, fontColor } from '../styles/globalStyle';
 import logoLight from '../assets/logo.svg';
 import logoDark from '../assets/logo2.svg';
 import arrowDown from '../assets/arrow_down.svg';

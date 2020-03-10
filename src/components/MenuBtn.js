@@ -86,7 +86,7 @@ export default () => {
             menuBtn.classList.remove('menuActive')
         }
     }
-    
+
     return (
         <div>
             <MobileHeader id='mobileHeader'>
@@ -95,7 +95,7 @@ export default () => {
                 </Link>
                 <Tag>
                     V 1.0
-                     </Tag>
+                </Tag>
             </MobileHeader>
             <MenuBtn onClick={handleMenu} id='menuBtn'>
                 <img src={menu} alt='menu' />
