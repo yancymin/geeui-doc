@@ -6,6 +6,12 @@ import dribbble from '../assets/dribbble.svg';
 import { color, fontColor, ease } from '../styles/globalStyle';
 import "../styles/dark.css";
 import useDarkMode from 'use-dark-mode';
+import Search from "../components/search/index"
+
+const searchIndices = [
+    { name: `Pages`, title: `Pages`, hitComp: `PageHit` },
+    { name: `Posts`, title: `Blog Posts`, hitComp: `PostHit` },
+]
 
 const Icon = styled.a`
     position: relative;
@@ -151,6 +157,7 @@ export default () => {
 
     return (
         <IconWrap>
+            <Search collapse indices={searchIndices} />
             <Toggle checked={darkMode.value} onChange={darkMode.toggle} />
             <Iconui href='https://dribbble.com/geetest' iconsrc={dribbble} alt='dribbble' tips='团队 Dribbble' />
             <Iconui href='https://geetest.design' iconsrc={gdesign} alt='gdesign' tips='极验用户体验设计中心' />
