@@ -1,7 +1,7 @@
 import React from "react"
 import Sidebar from "./sidebar"
 import Iconui from "./iconui"
-import MenuBtn from "./menuBtn"
+import MenuBtn from "./menubtn"
 import SiteMetadata from "./site-metadata"
 import styled from 'styled-components';
 import { color, fontColor, ease } from '../styles/globalStyle';
