@@ -58,7 +58,7 @@ const Heading = styled.header`
   @media screen and (max-width: 414px) {
       width: 100vw;
       left: -24px;
-      padding: 100px 24px 64px 24px;
+      padding: 120px 24px 64px 24px;
 
       img {
         right: -40% !important;

@@ -77,8 +77,9 @@ const Tag = styled.span`
     height: fit-content;
     padding: 2px 6px;
     background-color: var(--gray5);
+    font-family: 'source-han-sans-simplified-c', 'sans-serif';
     font-size: 10px;
-    font-weight: 600;
+    font-weight: 400;
     border-radius: 3px;
     color: var(--black2);
 `

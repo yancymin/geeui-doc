@@ -94,17 +94,17 @@ tr:hover {
   background-color: var(--gray1);
 }
 
-th,
+/* th,
 td {
   padding: 14px 6px;
-}
-
+} */
 
 .sideBarOpen {
   overflow-y: scroll !important;
   overflow-x: hidden !important;
   transform: translateX(0) !important;
-  box-shadow: 1px 0px 0px rgba(216, 221, 230, 0.6), 3px 0px 6px rgba(41, 47, 58, 0.14) !important;
+  box-shadow: 1px 0px 0px rgba(216, 221, 230, 0.6),
+    3px 0px 6px rgba(41, 47, 58, 0.14) !important;
 }
 
 .mobileHeaderDis {
@@ -114,4 +114,11 @@ td {
 
 .menuActive {
   transform: rotate(90deg);
+}
+
+@media screen and (max-width: 414px) {
+  h1 {
+    font-size: 38px !important;
+    line-height: 38px !important;
+  }
 }
