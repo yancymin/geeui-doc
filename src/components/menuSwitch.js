@@ -46,6 +46,9 @@ const Tag = styled.span`
 
 const MenuBtn = styled.button`
     visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 100;
     position: fixed;
     bottom: 16px;
