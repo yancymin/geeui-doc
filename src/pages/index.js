@@ -141,9 +141,9 @@ export default ({ data }) => {
           GEE-UI Design System
         </h1>
         <p>
-          Gee-UI 是极验（Geetest）内部的产品后台设计系统，包含可复用的 Web UI 组件、视觉样式和设计准则。旨在帮助开发工程师、设计师和产品设计师一起构建并维护极验产品后台，为我们的用户创造始终如一的友好体验。
+          GEE-UI 是极验（Geetest）内部的产品后台设计系统，包含可复用的 Web UI 组件、视觉样式和设计准则。旨在帮助开发工程师、设计师和产品设计师一起构建并维护极验产品后台，为我们的用户创造始终如一的友好体验。
         </p>
-        <Link to='/开始/关于 Gee-UI'>
+        <Link to='/开始/关于 GEE-UI'>
           开始浏览
         </Link>
         <img src={Hero} />
@@ -153,7 +153,7 @@ export default ({ data }) => {
           快速开始
         </h2>
         <Cards>
-          <Card imgSrc={Card1} h3='关于' des='Gee-UI 原则和团队成员' link='/开始/关于 Gee-UI' />
+          <Card imgSrc={Card1} h3='关于' des='GEE-UI 原则和团队成员' link='/开始/关于 GEE-UI' />
           <Card imgSrc={Card2} h3='基本' des='全局风格样式的基础规范' link='/基本/颜色' />
           <Card imgSrc={Card3} h3='组件' des='Web UI 组件库' link='/组件/按钮 Button' />
           <Card imgSrc={Card4} h3='帮助' des='GEE-UI 的问答和反馈' link='/帮助' />

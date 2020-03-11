@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     title: `GEE-UI`,
     siteUrl: 'https://geeui.geetest.design',
-    description: 'Gee-UI 是极验（Geetest）内部的产品后台设计系统，包含可复用的 Web UI 组件、视觉样式和设计准则。',
+    description: 'GEE-UI 是极验（Geetest）内部的产品后台设计系统，包含可复用的 Web UI 组件、视觉样式和设计准则。',
     titleTemplate: "%s | GEE-UI Design System",
     url: "https://geeui.geetest.design", // No trailing slash allowed!
     image: "/assets/logo-icon.png", // Path to your image you placed in the 'static' folder
