@@ -146,7 +146,7 @@ export default props => {
     down = router2[router2.indexOf(current) + 1]
 
     const LeftCom = () => (
-        current.includes('关于 GEE-UI') ? null : <Left to={(current === '/帮助') ? router2[router2.length - 2] : up} >
+        current.includes('关于 Gee-UI') ? null : <Left to={(current === '/帮助') ? router2[router2.length - 2] : up} >
             <span>
                 上一篇
         </span>
