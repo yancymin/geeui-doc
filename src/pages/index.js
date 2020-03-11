@@ -130,7 +130,6 @@ const Components = styled.div`
     p {
       margin-bottom: 40px;
     }
-
 `
 
 export default ({ data }) => {
