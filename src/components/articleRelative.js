@@ -140,7 +140,6 @@ export default props => {
     }
 
     let up, down;
-
     // let current = title().replace(/\S+\s+/, '')
     let current = '/' + title().replace(' ', '/')
     up = router2[router2.indexOf(current) - 1]
