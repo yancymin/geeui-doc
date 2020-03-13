@@ -5,5 +5,12 @@
             "GATSBY_ALGOLIA_SEARCH_KEY": "4164022d771d8206b6a0686e1a558089",
             "ALGOLIA_ADMIN_KEY": "c901ca3ed6941f1dcd4904ee3fb7d8df"
         }
-    }
+    },
+    "routes": [
+        {
+            "src": "/.*",
+            "status": 404,
+            "dest": "/404"
+        }
+    ]
 }
