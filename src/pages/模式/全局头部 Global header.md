@@ -1,5 +1,5 @@
 ---
-title: "全局头部 Global head"
+title: "全局头部 Global header"
 date: "2020-02-14"
 des: "全局的水平头部导航。"
 ---
