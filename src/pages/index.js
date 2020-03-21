@@ -154,7 +154,7 @@ export default ({ data }) => {
         <Cards>
           <Card imgSrc={Card1} h3='关于' des='GEE-UI 原则和团队成员' link='/开始/关于 Gee-UI' />
           <Card imgSrc={Card2} h3='基本' des='全局风格样式的基础规范' link='/基本/颜色' />
-          <Card imgSrc={Card3} h3='组件' des='Web UI 组件库' link='/组件/按钮 Button' />
+          <Card imgSrc={Card3} h3='组件' des='Web UI 组件库' link='/组件/按钮 Buttons' />
           <Card imgSrc={Card4} h3='帮助' des='GEE-UI 的问答和反馈' link='/帮助' />
         </Cards>
       </Start>
