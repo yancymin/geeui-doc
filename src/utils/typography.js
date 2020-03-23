@@ -22,7 +22,7 @@ const typography = new Typography({
             fontSize: '24px',
             lineHeight: '24px',
             fontWeight: '400',
-            margin: '48px 0 32px 0',
+            margin: '80px 0 32px 0',
             color: `var(--black1)`
         },
         h3: {
